@@ -260,36 +260,156 @@ a {
   font-style: italic;
 }
 
-/* ---------- REGISTRY ---------- */
+/* ---------- FUNDS ---------- */
 
-.registry-section {
-  background: #e9ece4;
+.fund-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 50px;
 }
 
-.registry-section .section-text {
-  color: #5d665b;
+.fund-card {
+  padding: 48px 35px;
+  border: 1px solid #E3C8CC;
+  background: #F9F3F0;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fund-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(77, 43, 51, 0.08);
+}
+
+.fund-icon {
+  margin-bottom: 18px;
+  color: #873D4B;
+  font-size: 1.6rem;
+}
+
+.fund-label {
+  color: #873D4B;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.fund-card h3 {
+  margin: 12px 0 18px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.fund-card > p:not(.fund-label) {
+  max-width: 390px;
+  margin: 0 auto;
+  color: #806B70;
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.fund-button-placeholder {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 11px 25px;
+  border: 1px solid #B9827E;
+  color: #873D4B;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .fund-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .fund-card {
+    padding: 38px 25px;
+  }
+
+  .fund-card h3 {
+    font-size: 1.8rem;
+  }
+}
 }
 
 /* ---------- FOOTER ---------- */
 
 .footer {
-  padding: 35px 20px;
-  background: var(--evergreen);
-  color: var(--ivory);
+  width: 100%;
+  padding: 65px 24px 45px;
+  background: #344B3D;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.footer p:first-child {
+.footer-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.footer-flourish span:not(:nth-child(2)) {
+  width: 55px;
+  height: 1px;
+  background: #D9A8B3;
+}
+
+.footer-flourish span:nth-child(2) {
+  color: #E8BFC6;
+  font-size: 0.8rem;
+}
+
+.footer-names {
+  margin: 0;
+  color: #344B3D;
   font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   letter-spacing: 0.12em;
 }
 
-.footer p:last-child {
-  margin-top: 7px;
-  color: #d4dacd;
+.footer-date {
+  margin-top: 12px;
+  color: #E8BFC6;
   font-size: 0.65rem;
   letter-spacing: 0.2em;
+}
+
+.footer-message {
+  margin-top: 28px;
+  color: #F9F3F0;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.footer-heart {
+  margin-top: 18px;
+  color: #D9A8B3;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 55px 20px 35px;
+  }
+
+  .footer-names {
+    font-size: 1.6rem;
+  }
+
+  .footer-flourish span:not(:nth-child(2)) {
+    width: 40px;
+  }
 }
 
 /* ---------- MOBILE ---------- */
@@ -329,4 +449,1009 @@ a {
     padding: 40px 18px;
   }
 }
-```
+/* ---------- OUR STORY: ROMANTIC DETAILS ---------- */
+
+.story-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 24px 100px;
+  background: #F9F3F0;
+}
+
+/* Soft decorative corner accents */
+.story-section::before,
+.story-section::after {
+  content: "✧";
+  position: absolute;
+  color: #D9A8B3;
+  font-size: 5rem;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.story-section::before {
+  top: 35px;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+
+.story-section::after {
+  right: 5%;
+  bottom: 35px;
+  transform: rotate(15deg);
+}
+
+.story-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.story-section .eyebrow {
+  color: #873D4B;
+  letter-spacing: 0.25em;
+}
+
+.story-section h2 {
+  margin-top: 12px;
+  color: #873D4B;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Delicate divider */
+.story-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 25px auto 18px;
+}
+
+.story-flourish span:not(.flourish-heart) {
+  width: 65px;
+  height: 1px;
+  background: #C99BA4;
+}
+
+.flourish-heart {
+  color: #A65365;
+  font-size: 0.85rem;
+}
+
+.story-tagline {
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-style: italic;
+}
+
+/* Main story card */
+.story-letter {
+  position: relative;
+  margin-top: 38px;
+  padding: 48px clamp(24px, 6vw, 65px);
+  border: 1px solid #E3C8CC;
+  outline: 1px solid #E3C8CC;
+  outline-offset: 6px;
+  background: #FFFAF8;
+  text-align: left;
+  box-shadow: 0 15px 45px rgba(77, 43, 51, 0.06);
+}
+
+.story-letter p {
+  margin-bottom: 22px;
+  color: #59464A;
+  font-size: 0.98rem;
+  line-height: 2;
+}
+
+/* Elegant opening paragraph */
+.story-letter .story-dropcap {
+  margin-bottom: 28px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+/* Emphasized ending */
+.story-letter .story-ending {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  color: #873D4B;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* Handwritten-style signoff */
+.story-signoff {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid #EAD9DC;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.story-signoff .signoff-heart {
+  color: #B65F70;
+  font-size: 0.85rem;
+}
+
+/* Final romantic detail */
+.story-bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.story-bottom-note p {
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+.story-sparkle {
+  color: #B9827E;
+  font-size: 1.25rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+  .story-section {
+    padding: 80px 25px;
+  }
+
+  .story-section::before {
+    top: 15px;
+    left: 2%;
+    font-size: 3rem;
+  }
+
+  .story-section::after {
+    right: 2%;
+    bottom: 15px;
+    font-size: 3rem;
+  }
+
+  .story-letter {
+    margin-top: 30px;
+    padding: 30px 22px;
+    outline-offset: 4px;
+  }
+
+  .story-letter p {
+    font-size: 0.94rem;
+    line-height: 1.9;
+  }
+
+  .story-letter .story-dropcap {
+    font-size: 1.2rem;
+  }
+
+  .story-dropcap::first-letter {
+    font-size: 3.5rem;
+  }
+
+  .story-bottom-note {
+    gap: 9px;
+  }
+
+  .story-bottom-note p {
+    font-size: 1rem;
+  }
+}
+/* ---------- WEDDING DETAILS ---------- */
+
+.details-section {
+  position: relative;
+  overflow: hidden;
+  padding: 115px 24px 105px;
+  background: #FFFAF8;
+}
+
+.details-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.details-section .eyebrow {
+  color: #873D4B;
+}
+
+.details-section h2 {
+  margin-top: 12px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Decorative divider */
+
+.details-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto 20px;
+}
+
+.details-flourish span:not(:nth-child(2)) {
+  width: 70px;
+  height: 1px;
+  background: #D5AAB3;
+}
+
+.details-flourish span:nth-child(2) {
+  color: #873D4B;
+  font-size: 0.9rem;
+}
+
+.details-intro {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* Main wedding card */
+
+.details-main-card {
+  max-width: 650px;
+  margin: 50px auto 65px;
+  padding: 60px 30px;
+  border: 1px solid #DDBFC5;
+  outline: 1px solid #DDBFC5;
+  outline-offset: 7px;
+  background: #F9F3F0;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(77, 43, 51, 0.05);
+}
+
+.detail-label {
+  color: #873D4B;
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+}
+
+.details-main-card h3 {
+  margin: 15px 0 20px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 400;
+}
+
+.venue-name {
+  color: #453238;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+}
+
+.venue-location {
+  margin-top: 3px;
+  color: #806B70;
+  font-size: 0.95rem;
+}
+
+.date-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  color: #873D4B;
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.date-note-heart {
+  color: #B65F70;
+  font-size: 0.7rem;
+}
+
+/* Three information cards */
+
+.detail-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.detail-card {
+  min-height: 270px;
+  padding: 35px 25px;
+  border: 1px solid #E6D8DB;
+  background: #F9F3F0;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(77, 43, 51, 0.08);
+}
+
+.detail-icon {
+  margin-bottom: 18px;
+  color: #873D4B;
+  font-size: 1.45rem;
+}
+
+.detail-card-label {
+  color: #873D4B;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.detail-card h4 {
+  margin: 12px 0 15px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.detail-card > p:last-child {
+  color: #806B70;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* Bottom message */
+
+.details-bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.details-bottom p {
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .details-section {
+    padding: 85px 22px;
+  }
+
+  .details-main-card {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 45px 20px;
+  }
+
+  .detail-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .detail-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .details-flourish span:not(:nth-child(2)) {
+    width: 45px;
+  }
+}
+/* ---------- TRAVEL & ACCOMMODATIONS ---------- */
+
+.travel-section {
+  position: relative;
+  overflow: hidden;
+  padding: 115px 24px 105px;
+  background: #F9F3F0;
+}
+
+.travel-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.travel-section .eyebrow {
+  color: #873D4B;
+}
+
+.travel-section h2 {
+  margin-top: 12px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Divider */
+
+.travel-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto 20px;
+}
+
+.travel-flourish span:not(:nth-child(2)) {
+  width: 70px;
+  height: 1px;
+  background: #D5AAB3;
+}
+
+.travel-flourish span:nth-child(2) {
+  color: #873D4B;
+  font-size: 0.9rem;
+}
+
+.travel-intro {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+/* Main travel cards */
+
+.travel-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 55px;
+}
+
+.travel-card {
+  padding: 35px 28px;
+  border: 1px solid #E3C8CC;
+  background: #FFFAF8;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.travel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(77, 43, 51, 0.08);
+}
+
+.travel-icon {
+  margin-bottom: 18px;
+  color: #873D4B;
+  font-size: 1.45rem;
+}
+
+.travel-card-label {
+  color: #873D4B;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.travel-card h3 {
+  margin: 12px 0 15px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.travel-card > p:not(.travel-card-label):not(.travel-detail) {
+  color: #806B70;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.travel-detail {
+  margin-top: 15px;
+  color: #873D4B;
+  font-size: 0.8rem;
+}
+
+/* Hotels */
+
+.stay-section {
+  margin-top: 75px;
+  padding: 60px 35px;
+  border-top: 1px solid #E3C8CC;
+  border-bottom: 1px solid #E3C8CC;
+  text-align: center;
+}
+
+.stay-section h3 {
+  margin: 12px 0 12px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.stay-intro {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #806B70;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.hotel-item {
+  padding: 25px 20px;
+  background: #FFFAF8;
+}
+
+.hotel-item h4 {
+  margin-bottom: 10px;
+  color: #873D4B;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.hotel-item p {
+  color: #806B70;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* While you're here */
+
+.while-here {
+  max-width: 800px;
+  margin: 85px auto 0;
+  text-align: center;
+}
+
+.while-here .eyebrow {
+  margin-bottom: 12px;
+}
+
+.while-here > h3 {
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+}
+
+.while-here-intro {
+  max-width: 550px;
+  margin: 15px auto 40px;
+  color: #806B70;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.favorite-list {
+  text-align: left;
+}
+
+.favorite-item {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 25px 0;
+  border-bottom: 1px solid #E3C8CC;
+}
+
+.favorite-item:first-child {
+  border-top: 1px solid #E3C8CC;
+}
+
+.favorite-number {
+  color: #B65F70;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.favorite-item h4 {
+  margin-bottom: 6px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.favorite-item p {
+  color: #806B70;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Winter note */
+
+.winter-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 700px;
+  margin: 65px auto 0;
+  padding: 25px 30px;
+  border: 1px solid #E3C8CC;
+  background: #FFFAF8;
+  text-align: center;
+}
+
+.winter-note > span {
+  color: #B9827E;
+  font-size: 1.1rem;
+}
+
+.winter-note p {
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.winter-note strong {
+  color: #873D4B;
+  font-style: normal;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .travel-section {
+    padding: 85px 22px;
+  }
+
+  .travel-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .travel-card {
+    padding: 30px 25px;
+  }
+
+  .travel-flourish span:not(:nth-child(2)) {
+    width: 45px;
+  }
+
+  .stay-section {
+    margin-top: 55px;
+    padding: 45px 20px;
+  }
+
+  .hotel-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .while-here {
+    margin-top: 65px;
+  }
+
+  .favorite-item {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .winter-note {
+    padding: 22px 18px;
+    gap: 10px;
+  }
+
+  .winter-note > span {
+    display: none;
+  }
+}
+/* Venmo fund buttons */
+
+.fund-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 26px;
+  border: 1px solid #873D4B;
+  background: #873D4B;
+  color: #FFFAF8;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.fund-button:hover {
+  background: #344B3D;
+  border-color: #344B3D;
+  transform: translateY(-2px);
+}
+.registry-intro-second {
+  margin-top: 10px;
+}
+.in-person-gift {
+  width: 100%;
+  max-width: 650px;
+  margin: 35px auto 0;
+  padding: 25px 28px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.in-person-gift > div {
+  width: 100%;
+  text-align: center;
+}
+
+.gift-icon {
+  display: block;
+  text-align: center;
+}
+
+.gift-title {
+  text-align: center;
+}
+
+.in-person-gift p {
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.in-person-gift {
+  width: min(650px, 100%);
+  margin: 35px auto 0;
+  padding: 25px 28px;
+  box-sizing: border-box;
+  border: 1px solid #E3C8CC;
+  background: #FFFAF8;
+  text-align: center;
+}
+
+.in-person-gift > div {
+  width: 100%;
+  text-align: center;
+}
+
+.gift-icon {
+  display: block;
+  margin-bottom: 8px;
+  color: #873D4B;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.gift-title {
+  margin-bottom: 6px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.in-person-gift p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.in-person-gift p:last-child {
+  color: #806B70;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+/* RSVP */
+
+.rsvp-section {
+  position: relative;
+  overflow: hidden;
+  padding: 115px 24px 105px;
+  background: #F9F3F0;
+}
+
+.rsvp-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rsvp-section .eyebrow {
+  color: #873D4B;
+}
+
+.rsvp-section h2 {
+  margin-top: 12px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.rsvp-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto 20px;
+}
+
+.rsvp-flourish span:not(:nth-child(2)) {
+  width: 70px;
+  height: 1px;
+  background: #D5AAB3;
+}
+
+.rsvp-flourish span:nth-child(2) {
+  color: #873D4B;
+  font-size: 0.9rem;
+}
+
+.rsvp-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #806B70;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.rsvp-card {
+  max-width: 600px;
+  margin: 50px auto 0;
+  padding: 55px 40px;
+  border: 1px solid #DDBFC5;
+  outline: 1px solid #DDBFC5;
+  outline-offset: 7px;
+  background: #FFFAF8;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(77, 43, 51, 0.05);
+}
+
+.rsvp-icon {
+  margin-bottom: 18px;
+  color: #873D4B;
+  font-size: 1.6rem;
+}
+
+.rsvp-card h3 {
+  margin-bottom: 18px;
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.rsvp-card > p {
+  max-width: 480px;
+  margin: 0 auto;
+  color: #806B70;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.rsvp-card .rsvp-note {
+  margin-top: 15px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.rsvp-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  color: #873D4B;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+}
+
+.rsvp-date span:nth-child(2) {
+  color: #B65F70;
+}
+
+.rsvp-bottom {
+  margin-top: 45px;
+}
+
+.rsvp-bottom p {
+  color: #344B3D;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .rsvp-section {
+    padding: 85px 22px;
+  }
+
+  .rsvp-flourish span:not(:nth-child(2)) {
+    width: 45px;
+  }
+
+  .rsvp-card {
+    margin-top: 40px;
+    padding: 45px 25px;
+  }
+
+  .rsvp-card h3 {
+    font-size: 1.9rem;
+  }
+
+  .rsvp-date {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .rsvp-date span:nth-child(2) {
+    display: none;
+  }
+}
+/* Bring RSVP closer to Registry */
+
+.registry-section {
+  padding-bottom: 55px;
+}
+
+.rsvp-section {
+  padding-top: 55px;
+}
+/* Alternating section backgrounds */
+
+.story-section {
+  background: #F9F3F0;
+}
+
+.details-section {
+  background: #FFFAF8;
+}
+
+.travel-section {
+  background: #F9F3F0;
+}
+
+.registry-section {
+  background: #FFFAF8;
+}
+
+.rsvp-section {
+  background: #F9F3F0;
+}
