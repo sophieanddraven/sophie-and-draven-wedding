@@ -385,11 +385,12 @@ a {
 }
 
 .footer-message {
-  margin-top: 28px;
-  color: #F9F3F0;
-  font-family: "Playfair Display", serif;
-  font-size: 1rem;
-  font-style: italic;
+  margin: 0.5rem 0 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #344B3D;
+  opacity: 1;
+  letter-spacing: 0.03em;
 }
 
 .footer-heart {
