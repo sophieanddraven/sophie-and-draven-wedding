@@ -1,0 +1,332 @@
+```css
+/* ---------- WEDDING COLORS & RESET ---------- */
+
+
+:root {
+  --cream: #F9F3F0;
+  --ivory: #FFFAF8;
+  --evergreen: #344B3D;
+  --forest: #873D4B;
+  --sage: #E8BFC6;
+  --gold: #B9827E;
+  --text: #453238;
+  --muted: #806B70;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--ivory);
+  overflow: hidden;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(19, 34, 27, 0.55),
+      rgba(19, 34, 27, 0.30) 45%,
+      rgba(19, 34, 27, 0.72)
+    ),
+    url("https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=2200&q=85")
+    center 50% / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 253, 248, 0.35);
+  pointer-events: none;
+}
+
+.navigation {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 8%;
+}
+
+.nav-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.65rem;
+  letter-spacing: 0.12em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.65;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 24px 90px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 20px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.3rem, 9vw, 7.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.hero h1 span {
+  color: #d7c8a5;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  margin-top: 22px;
+  font-size: 0.76rem;
+  letter-spacing: 0.28em;
+}
+
+.ornament {
+  margin: 27px 0;
+  color: #d7c8a5;
+  font-size: 1.5rem;
+}
+
+.wedding-date {
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+}
+
+.hero-location {
+  margin-top: 6px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 13px 28px;
+  border: 1px solid rgba(255, 253, 248, 0.75);
+  color: var(--ivory);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.button:hover {
+  background: var(--ivory);
+  color: var(--evergreen);
+}
+
+.hero-bottom {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.section {
+  padding: 105px 24px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-top: 10px;
+  color: var(--evergreen);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.section .eyebrow {
+  color: var(--forest);
+}
+
+.small-divider {
+  margin: 20px 0;
+  color: var(--gold);
+  font-size: 1.3rem;
+}
+
+.section-text {
+  max-width: 570px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+/* ---------- OUR STORY ---------- */
+
+.story-section {
+  background: var(--ivory);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ---------- WEDDING DETAILS ---------- */
+
+.details-section {
+  background: var(--cream);
+}
+
+.details-card {
+  max-width: 540px;
+  margin: 40px auto 0;
+  padding: 55px 25px;
+  border: 1px solid #d8d5c8;
+  background: rgba(255, 253, 248, 0.65);
+  outline: 1px solid #d8d5c8;
+  outline-offset: 7px;
+}
+
+.detail-label {
+  color: var(--forest);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+
+.details-card h3 {
+  margin: 16px 0;
+  color: var(--evergreen);
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.details-card p {
+  color: var(--muted);
+}
+
+.details-card .coming-soon {
+  margin-top: 25px;
+  color: var(--forest);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+/* ---------- REGISTRY ---------- */
+
+.registry-section {
+  background: #e9ece4;
+}
+
+.registry-section .section-text {
+  color: #5d665b;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  padding: 35px 20px;
+  background: var(--evergreen);
+  color: var(--ivory);
+  text-align: center;
+}
+
+.footer p:first-child {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+}
+
+.footer p:last-child {
+  margin-top: 7px;
+  color: #d4dacd;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+  .navigation {
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px 18px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    font-size: 0.65rem;
+  }
+
+  .hero::after {
+    inset: 9px;
+  }
+
+  .hero-content {
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .section {
+    padding: 80px 22px;
+  }
+
+  .details-card {
+    padding: 40px 18px;
+  }
+}
+```
