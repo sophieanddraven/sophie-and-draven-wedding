@@ -1695,3 +1695,144 @@ body footer.rsvp-footer .rsvp-footer-bottom {
   font-size: 11px;
   color: #b9c8bf;
 }
+
+/* =====================================
+   SOPHIE & DRAVEN — TRAVEL PAGE
+   ===================================== */
+
+.travel-page {
+  background: #f7f8f6;
+  padding: 70px 20px 85px;
+}
+
+.travel-intro {
+  max-width: 650px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.travel-heart {
+  display: block;
+  color: #874452;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.travel-intro h2,
+.travel-explore h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(40px, 6vw, 55px);
+  font-weight: 500;
+  color: #203b33;
+  margin: 15px 0 22px;
+}
+
+.travel-intro p,
+.travel-explore p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #66716f;
+  margin-bottom: 15px;
+}
+
+.travel-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1050px;
+  margin: 0 auto 85px;
+}
+
+.travel-info-card {
+  background: #ffffff;
+  border: 1px solid #d5e2e5;
+  border-radius: 6px;
+  padding: 42px 35px;
+  text-align: center;
+}
+
+.travel-card-symbol {
+  color: #874452;
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.travel-info-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #203b33;
+  margin: 0 0 18px;
+}
+
+.travel-info-card p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #66716f;
+  margin: 0 0 15px;
+}
+
+.travel-info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.travel-explore {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.travel-closing {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px 20px;
+  border-top: 1px solid #d5e2e5;
+  text-align: center;
+}
+
+.travel-closing span {
+  color: #874452;
+  font-size: 18px;
+}
+
+.travel-closing p {
+  color: #66716f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.travel-closing-signature {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px !important;
+  font-style: italic;
+  color: #203b33 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .travel-page {
+    padding: 45px 15px 65px;
+  }
+
+  .travel-intro {
+    margin-bottom: 45px;
+  }
+
+  .travel-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .travel-info-card {
+    padding: 30px 24px;
+  }
+
+  .travel-explore {
+    margin-bottom: 50px;
+  }
+}
