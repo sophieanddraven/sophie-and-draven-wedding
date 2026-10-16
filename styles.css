@@ -3479,3 +3479,34 @@ p {
     background-position: center bottom;
   }
 }
+
+/* iPhone winter background fix */
+@media screen and (max-width: 768px) {
+
+  .hero .hero-winter-art {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("./winter-details.svg");
+    background-repeat: no-repeat;
+
+    /* Keep the full illustration visible */
+    background-size: 100% 100%;
+    background-position: center bottom;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero .navigation,
+  .hero .hero-content,
+  .hero .hero-bottom {
+    position: relative;
+    z-index: 2;
+  }
+}
