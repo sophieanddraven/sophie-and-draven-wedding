@@ -48,16 +48,6 @@
 
 }
 
-
-
-  --shadow-soft: 0 12px 35px rgba(36, 60, 53, 0.08);
-
-  --shadow-hover: 0 18px 45px rgba(36, 60, 53, 0.13);
-
-}
-
-
-
 /* =========================================================
 
    RESET
@@ -2755,4 +2745,15 @@ p {
   .story-letter {
     padding: 1.7rem 1.35rem;
   }
+}
+
+/* If you have the original mountain hero image, save it as mountain.jpg
+   beside index.html and styles.css to display it. */
+.hero {
+  background-image:
+    linear-gradient(rgba(20, 42, 38, .38), rgba(20, 42, 38, .52)),
+    url("mountain.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #29473f;
 }
