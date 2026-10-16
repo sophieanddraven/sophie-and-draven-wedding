@@ -1451,3 +1451,87 @@
     font-size: 40px;
   }
 }
+
+/* =====================================
+   ELEGANT WEDDING NAVIGATION
+   ===================================== */
+
+body > header {
+  background: #203b33;
+  padding: 0 5%;
+  position: relative;
+  z-index: 100;
+}
+
+body > header nav {
+  max-width: 1250px;
+  margin: 0 auto;
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+body > header nav > a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  color: #f7f4ed;
+  text-decoration: none;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+body > header nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+body > header nav > div a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #f7f4ed;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body > header nav > div a:hover {
+  color: #d8aab5;
+}
+
+body > header nav > div a[href="rsvp.html"] {
+  border: 1px solid #d8aab5;
+  border-radius: 2px;
+  padding: 10px 17px;
+  color: #f7f4ed;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 800px) {
+
+  body > header {
+    padding: 18px 15px;
+  }
+
+  body > header nav {
+    flex-direction: column;
+    min-height: auto;
+    gap: 15px;
+  }
+
+  body > header nav > div {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  body > header nav > div a {
+    font-size: 11px;
+  }
+
+}
