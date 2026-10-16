@@ -1,1224 +1,227 @@
-/* =========================================================
-   SOPHIE & DRAVEN
-   WINTER WEDDING — DECEMBER 9, 2028
-========================================================= */
-
-:root {
-  --snow: #F8F7F4;
-  --ivory: #FCFBF9;
-  --winter: #EEF4F4;
-  --ice: #DCE8E8;
-  --ice-blue: #B8CDD0;
-
-  --pine: #243C35;
-  --spruce: #405D59;
-  --cranberry: #8A4653;
-
-  --champagne: #B8AFA5;
-  --text: #303437;
-  --muted: #6F7777;
-  --white: #FFFFFF;
-
-  --shadow-soft: 0 12px 35px rgba(36, 60, 53, 0.08);
-  --shadow-hover: 0 18px 45px rgba(36, 60, 53, 0.13);
+2625
+2626
+2627
+2628
+2629
+2630
+2631
+2632
+2633
+2634
+2635
+2636
+2637
+2638
+2639
+2640
+2641
+2642
+2643
+2644
+2645
+2646
+2647
+2648
+2649
+2650
+2651
+2652
+2653
+2654
+2655
+2656
+2657
+2658
+2659
+2660
+2661
+2662
+2663
+2664
+2665
+2666
+2667
+2668
+2669
+2670
+2671
+2672
+2673
+2674
+2675
+2676
+2677
+2678
+2679
+2680
+2681
+2682
+2683
+2684
+2685
+2686
+2687
+2688
+2689
+2690
+2691
+2692
+2693
+2694
+2695
+2696
+2697
+2698
+2699
+2700
+2701
+2702
+2703
+2704
+2705
+2706
+2707
+2708
+2709
+2710
+2711
+2712
+2713
+2714
+2715
+2716
+2717
+2718
+2719
+2720
+2721
+2722
+2723
+2724
+2725
+2726
+2727
+2728
+2729
+2730
+2731
+2732
+2733
+2734
+2735
+2736
+2737
+2738
+2739
+2740
+2741
+2742
+2743
+2744
+2745
+2746
+2747
+2748
+2749
+2750
+2751
+2752
 }
 
-/* =========================================================
-   RESET
-========================================================= */
 
-* {
-  box-sizing: border-box;
-}
 
-html {
-  scroll-behavior: smooth;
-}
+.countdown-divider {
 
-body {
-  margin: 0;
-  background: var(--snow);
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  line-height: 1.15;
-  color: var(--pine);
-}
-
-h2 {
-  margin: 0.35rem 0 1rem;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-}
-
-p {
-  margin-top: 0;
-}
-
-.eyebrow {
-  margin: 0 0 0.65rem;
   color: var(--cranberry);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+
+  font-size: 0.8rem;
+
+  margin-top: -1rem;
+
+}
+
+
+
+@media (max-width: 650px) {
+
+  .countdown-section {
+
+    padding: 4.5rem 1rem;
+
+  }
+
+
+
+  .countdown {
+
+    gap: 0.8rem;
+
+  }
+
+
+
+  .countdown-unit {
+
+    min-width: 65px;
+
+  }
+
+
+
+  .countdown-divider {
+
+    font-size: 0.65rem;
+
+  }
+
+
+
+  .countdown-title span {
+
+    width: 30px;
+
+  }
+
 }
 
 /* =========================================================
-   HERO
+   FINAL POLISH
 ========================================================= */
 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  color: var(--white);
-
-  background:
-    radial-gradient(circle at 15% 20%, rgba(184, 205, 208, 0.12) 0 1px, transparent 2px),
-    radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.14) 0 1px, transparent 2px),
-    radial-gradient(circle at 40% 75%, rgba(255, 255, 255, 0.12) 0 1px, transparent 2px),
-    linear-gradient(135deg, #1E3530 0%, #29473F 48%, #203A35 100%);
-  background-size: 95px 95px, 130px 130px, 170px 170px, auto;
-}
-
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(1px);
-}
-
-.hero::before {
-  width: 340px;
-  height: 340px;
-  top: -170px;
-  right: -90px;
-  background: rgba(220, 232, 232, 0.07);
-}
-
-.hero::after {
-  width: 280px;
-  height: 280px;
-  bottom: -150px;
-  left: -100px;
-  background: rgba(184, 205, 208, 0.06);
-}
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.navigation {
-  position: relative;
-  z-index: 5;
-
-  width: 100%;
-  padding: 1.5rem 5vw;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-}
-
-.nav-logo {
-  color: var(--white);
-  text-decoration: none;
-
-  font-family: "Playfair Display", serif;
-  font-size: 1.25rem;
+.wedding-date {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 500;
   letter-spacing: 0.08em;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: rgba(255, 255, 255, 0.88);
-  text-decoration: none;
-
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-
-  transition: color 0.25s ease;
-}
-
-.nav-links a:hover {
-  color: var(--ice);
-}
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-
-  width: min(900px, 90%);
-  margin: auto;
-
-  text-align: center;
-}
-
-.hero .eyebrow {
-  color: var(--ice);
-}
-
-.hero h1 {
-  margin: 0;
-
-  color: var(--white);
-  font-size: clamp(4rem, 10vw, 8rem);
-  letter-spacing: -0.025em;
-}
-
-.hero h1 span {
-  color: var(--ice-blue);
-  font-weight: 400;
-}
-
-.hero-subtitle {
-  margin: 1rem 0 1.4rem;
-
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-}
-
-.ornament {
-  margin: 0.5rem 0;
-
-  color: var(--ice-blue);
-  font-size: 1.15rem;
-}
-
-.wedding-date {
-  margin: 1rem 0 0.25rem;
-
-  color: var(--white);
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  letter-spacing: 0.14em;
-}
-
-.hero-location {
-  margin-bottom: 2rem;
-
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.85rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.button {
-  display: inline-block;
-
-  padding: 0.9rem 1.7rem;
-
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 2px;
-
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.08);
-
-  text-decoration: none;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-
-  backdrop-filter: blur(8px);
-
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.button:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.75);
-  transform: translateY(-2px);
-}
-
-.hero-bottom {
-  position: relative;
-  z-index: 2;
-
-  padding: 1.25rem;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-
-  color: rgba(255, 255, 255, 0.62);
-  text-align: center;
-
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-}
-
-/* =========================================================
-   GENERAL SECTIONS
-========================================================= */
-
-.section {
-  position: relative;
-  padding: 6rem 1.5rem;
-}
-
-.section::before {
-  content: "✧";
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-
-  color: rgba(184, 205, 208, 0.38);
-  font-size: 0.8rem;
-}
-
-/* =========================================================
-   STORY
-========================================================= */
-
-.story-section {
-  background: var(--snow);
-}
-
-.story-inner {
-  width: min(850px, 100%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.story-flourish,
-.details-flourish,
-.registry-flourish,
-.rsvp-flourish,
-.countdown-flourish {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-
-  margin: 1rem auto 1.8rem;
-}
-
-.story-flourish span:first-child,
-.story-flourish span:last-child,
-.details-flourish span:first-child,
-.details-flourish span:last-child,
-.registry-flourish span:first-child,
-.registry-flourish span:last-child,
-.rsvp-flourish span:first-child,
-.rsvp-flourish span:last-child,
-.countdown-flourish span:first-child,
-.countdown-flourish span:last-child {
-  width: 55px;
-  height: 1px;
-  background: var(--ice-blue);
-}
-
-.flourish-heart,
-.story-flourish span:nth-child(2),
-.details-flourish span:nth-child(2),
-.registry-flourish span:nth-child(2),
-.rsvp-flourish span:nth-child(2),
-.countdown-flourish span:nth-child(2) {
-  color: var(--cranberry);
-  font-size: 0.8rem;
-}
-
-.story-tagline {
-  margin: 0 0 2rem;
-
-  color: var(--spruce);
-  font-family: "Playfair Display", serif;
-  font-size: 1.25rem;
-  font-style: italic;
-}
-
-.story-letter {
-  position: relative;
-
-  padding: clamp(2rem, 5vw, 3.5rem);
-
-  border: 1px solid rgba(184, 205, 208, 0.7);
-  border-radius: 3px;
-
-  background: rgba(255, 255, 255, 0.65);
-
-  box-shadow: var(--shadow-soft);
-
-  text-align: left;
-}
-
-.story-letter::before {
-  content: "❄";
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-
-  color: var(--ice-blue);
-  font-size: 0.9rem;
-}
-
-.story-letter p {
-  color: #555D5D;
-  font-size: 0.95rem;
-}
-
-.story-dropcap::first-letter {
-  float: left;
-
-  margin: 0.08em 0.08em 0 0;
-
-  color: var(--cranberry);
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  line-height: 0.8;
-}
-
-.story-ending {
-  margin-top: 2rem;
-
-  color: var(--pine) !important;
-  font-family: "Playfair Display", serif;
-  font-size: 1.1rem !important;
-  font-style: italic;
-}
-
-.story-signoff {
-  display: flex;
-  justify-content: center;
-  gap: 0.7rem;
-
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-
-  border-top: 1px solid rgba(184, 205, 208, 0.55);
-
-  color: var(--spruce);
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-.signoff-heart {
-  color: var(--cranberry);
-}
-
-.story-bottom-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  margin-top: 2rem;
-
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
-.story-bottom-note p {
-  margin: 0;
-}
-
-.story-sparkle {
-  color: var(--ice-blue);
-}
-
-/* =========================================================
-   COUNTDOWN
-========================================================= */
-
-.countdown-section {
-  position: relative;
-  overflow: hidden;
-
-  padding: 5.5rem 1.5rem;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--winter) 0%,
-      var(--ice) 100%
-    );
-
-  text-align: center;
-}
-
-.countdown-section::before,
-.countdown-section::after {
-  position: absolute;
-
-  color: rgba(64, 93, 89, 0.08);
-  font-size: 9rem;
-}
-
-.countdown-section::before {
-  content: "❄";
-  top: -2rem;
-  left: 5%;
-}
-
-.countdown-section::after {
-  content: "❄";
-  right: 5%;
-  bottom: -2rem;
-}
-
-.countdown-inner {
-  position: relative;
-  z-index: 1;
-
-  width: min(900px, 100%);
-  margin: 0 auto;
-}
-
-.countdown-section h2 {
-  color: var(--pine);
-}
-
-.countdown-date {
-  margin-bottom: 2.3rem;
-
-  color: var(--spruce);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-}
-
-.countdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.3rem;
-}
-
-.countdown-unit {
-  min-width: 95px;
-}
-
-.countdown-number {
-  display: block;
-
-  color: var(--pine);
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.8rem, 7vw, 4.7rem);
-  line-height: 1;
-}
-
-.countdown-label {
-  display: block;
-
-  margin-top: 0.65rem;
-
-  color: var(--muted);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-}
-
-.countdown-divider {
-  padding-bottom: 1.3rem;
-
-  color: var(--cranberry);
-  font-size: 1.3rem;
-}
-
-/* =========================================================
-   WEDDING DETAILS
-========================================================= */
-
-.details-section {
-  background: var(--ivory);
-}
-
-.details-inner {
-  width: min(1050px, 100%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.details-intro {
-  width: min(620px, 100%);
-  margin: 0 auto 2.5rem;
-
-  color: var(--muted);
-}
-
-.details-main-card {
-  position: relative;
-
-  width: min(700px, 100%);
-  margin: 0 auto 2rem;
-  padding: 3rem 2rem;
-
-  border: 1px solid var(--ice-blue);
-  border-radius: 4px;
-
-  background: var(--snow);
-
-  box-shadow: var(--shadow-soft);
-}
-
-.detail-label,
-.detail-card-label,
-.travel-card-label,
-.fund-label {
-  margin-bottom: 0.5rem;
-
-  color: var(--cranberry);
-  font-size: 0.63rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.date-note,
+.rsvp-date,
+.footer-date {
+  font-family: "DM Sans", sans-serif;
 }
 
 .details-main-card h3 {
-  margin: 0 0 0.5rem;
-
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .venue-name {
-  margin-bottom: 0.15rem;
-
-  color: var(--spruce);
-  font-family: "Playfair Display", serif;
-  font-size: 1.25rem;
-}
-
-.venue-location {
-  color: var(--muted);
-}
-
-.date-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-
-  margin-top: 1.5rem;
-  padding-top: 1.3rem;
-
-  border-top: 1px solid var(--ice);
-
-  color: var(--spruce);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-}
-
-.date-note-heart {
-  color: var(--cranberry);
-}
-
-.detail-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.detail-card {
-  padding: 2rem 1.5rem;
-
-  border: 1px solid rgba(184, 205, 208, 0.7);
-  border-radius: 3px;
-
-  background: var(--white);
-
-  box-shadow: var(--shadow-soft);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.detail-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.detail-icon {
-  margin-bottom: 1rem;
-
-  color: var(--cranberry);
-  font-size: 1.3rem;
-}
-
-.detail-card h4 {
-  margin: 0 0 0.8rem;
-
-  font-size: 1.35rem;
-}
-
-.detail-card p:last-child {
-  margin-bottom: 0;
-
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.details-bottom {
-  margin-top: 2rem;
-
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
-/* =========================================================
-   TRAVEL
-========================================================= */
-
-.travel-section {
-  background: var(--winter);
-}
-
-.travel-inner {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.travel-intro {
-  width: min(700px, 100%);
-  margin: 0 auto 2.5rem;
-
-  color: var(--muted);
-}
-
-.travel-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.travel-card {
-  padding: 2rem 1.5rem;
-
-  border: 1px solid rgba(184, 205, 208, 0.85);
-  border-radius: 3px;
-
-  background: rgba(255, 255, 255, 0.7);
-
-  box-shadow: var(--shadow-soft);
-}
-
-.travel-icon {
-  margin-bottom: 1rem;
-
-  color: var(--spruce);
-  font-size: 1.35rem;
-}
-
-.travel-card h3 {
-  margin: 0 0 0.7rem;
-
-  font-size: 1.4rem;
-}
-
-.travel-card p {
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.travel-detail {
-  margin-bottom: 0;
-
-  color: var(--spruce) !important;
-  font-size: 0.78rem !important;
-  font-weight: 600;
-}
-
-.stay-section {
-  margin-top: 4rem;
-  padding: 3rem;
-
-  border: 1px solid rgba(184, 205, 208, 0.7);
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.stay-section h3,
-.while-here h3 {
-  margin: 0.3rem 0 0.8rem;
-
-  font-size: 2rem;
-}
-
-.stay-intro,
-.while-here-intro {
-  color: var(--muted);
-}
-
-.hotel-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-
-  margin-top: 2rem;
-}
-
-.hotel-item {
-  padding: 1.3rem;
-
-  border-top: 1px solid var(--ice-blue);
-}
-
-.hotel-item h4 {
-  margin: 0 0 0.5rem;
-
-  font-size: 1.1rem;
-}
-
-.hotel-item p {
-  margin: 0;
-
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.while-here {
-  margin-top: 4rem;
-}
-
-.favorite-list {
-  width: min(800px, 100%);
-  margin: 2rem auto 0;
-
-  text-align: left;
-}
-
-.favorite-item {
-  display: flex;
-  gap: 1.3rem;
-
-  padding: 1.3rem 0;
-
-  border-bottom: 1px solid rgba(184, 205, 208, 0.65);
-}
-
-.favorite-number {
-  color: var(--cranberry);
-  font-family: "Playfair Display", serif;
-  font-size: 1.15rem;
-}
-
-.favorite-item h4 {
-  margin: 0 0 0.3rem;
-
-  font-size: 1.05rem;
-}
-
-.favorite-item p {
-  margin: 0;
-
-  color: var(--muted);
-  font-size: 0.83rem;
-}
-
-.winter-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  width: min(750px, 100%);
-  margin: 3rem auto 0;
-  padding: 1.3rem 1.5rem;
-
-  border: 1px solid var(--ice-blue);
-  background: rgba(255, 255, 255, 0.65);
-
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-style: italic;
-}
-
-.winter-note span {
-  color: var(--spruce);
-  font-size: 1.1rem;
-}
-
-.winter-note p {
-  margin: 0;
-}
-
-/* =========================================================
-   REGISTRY
-========================================================= */
-
-.registry-section {
-  background: var(--ivory);
-}
-
-.registry-inner {
-  width: min(1000px, 100%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.registry-intro,
-.registry-intro-second {
-  width: min(680px, 100%);
-  margin: 0 auto 0.8rem;
-
-  color: var(--muted);
-}
-
-.fund-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-
-  margin-top: 2.5rem;
-}
-
-.fund-card {
-  padding: 2.5rem 2rem;
-
-  border: 1px solid rgba(184, 205, 208, 0.8);
-  border-radius: 3px;
-
-  background: var(--snow);
-
-  box-shadow: var(--shadow-soft);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.fund-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.fund-icon {
-  margin-bottom: 1rem;
-
-  color: var(--cranberry);
-  font-size: 1.4rem;
-}
-
-.fund-card h3 {
-  margin: 0 0 0.8rem;
-
-  font-size: 1.7rem;
-}
-
-.fund-card > p:not(.fund-label) {
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.fund-button {
-  display: inline-block;
-
-  margin-top: 0.8rem;
-  padding: 0.8rem 1.25rem;
-
-  border: 1px solid var(--spruce);
-
-  color: var(--spruce);
-  text-decoration: none;
-
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  transition: all 0.25s ease;
-}
-
-.fund-button:hover {
-  background: var(--spruce);
-  color: var(--white);
-}
-
-.in-person-gift {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  width: min(700px, 100%);
-  margin: 2rem auto;
-  padding: 1.4rem 1.5rem;
-
-  border-left: 2px solid var(--ice-blue);
-
-  background: var(--winter);
-
-  text-align: left;
-}
-
-.gift-icon {
-  color: var(--cranberry);
-  font-size: 1.25rem;
-}
-
-.gift-title {
-  margin-bottom: 0.15rem;
-
-  color: var(--pine);
-  font-family: "Playfair Display", serif;
-  font-size: 1.05rem;
-}
-
-.in-person-gift p:last-child {
-  margin: 0;
-
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.registry-bottom {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-
-  border-top: 1px solid var(--ice);
-
-  color: var(--muted);
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-.registry-bottom span {
-  display: block;
-
-  margin-top: 0.6rem;
-
-  color: var(--cranberry);
-}
-
-/* =========================================================
-   RSVP
-========================================================= */
-
-.rsvp-section {
-  background:
-    linear-gradient(
-      135deg,
-      var(--winter),
-      var(--snow)
-    );
-}
-
-.rsvp-inner {
-  width: min(850px, 100%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.rsvp-intro {
-  width: min(600px, 100%);
-  margin: 0 auto 2rem;
-
-  color: var(--muted);
-}
-
-.rsvp-card {
-  position: relative;
-
-  padding: 3.2rem 2rem;
-
-  border: 1px solid var(--ice-blue);
-  border-radius: 4px;
-
-  background: rgba(255, 255, 255, 0.72);
-
-  box-shadow: var(--shadow-soft);
-}
-
-.rsvp-icon {
-  color: var(--cranberry);
-  font-size: 1.5rem;
-}
-
-.rsvp-card h3 {
-  margin: 0.8rem 0 1rem;
-
-  font-size: 2rem;
-}
-
-.rsvp-card p {
-  width: min(550px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-
-  color: var(--muted);
-}
-
-.rsvp-note {
-  font-size: 0.82rem;
-  font-style: italic;
-}
-
-.rsvp-date {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-
-  border-top: 1px solid var(--ice);
-
-  color: var(--spruce);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-}
-
-.rsvp-bottom {
-  margin-top: 2rem;
-
-  color: var(--cranberry);
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.footer {
-  position: relative;
-
-  padding: 4rem 1.5rem 3rem;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(184, 205, 208, 0.08),
-      transparent 45%
-    ),
-    var(--pine);
-
-  color: var(--white);
-
-  text-align: center;
-}
-
-.footer-flourish {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-
-  margin-bottom: 1.5rem;
-}
-
-.footer-flourish span:first-child,
-.footer-flourish span:last-child {
-  width: 50px;
-  height: 1px;
-  background: rgba(184, 205, 208, 0.5);
-}
-
-.footer-flourish span:nth-child(2) {
-  color: var(--ice-blue);
-}
-
-.footer-names {
-  margin-bottom: 0.4rem;
-
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
-}
-
-.footer-date {
-  margin-bottom: 1rem;
-
-  color: var(--ice-blue);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.17em;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .footer-message {
-  margin: 0.5rem 0 0;
-
-  color: rgba(255, 255, 255, 0.9);
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.03em;
+  color: #F8FAF8;
+  opacity: 1;
 }
-
-.footer-heart {
-  margin: 1rem 0 0;
-
-  color: var(--cranberry);
-  font-size: 1.1rem;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media (max-width: 800px) {
-
-  .navigation {
-    padding: 1.2rem 1.25rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hero {
-    min-height: 92vh;
-  }
-
-  .section {
-    padding: 4.5rem 1.2rem;
-  }
-
   .detail-cards,
-  .travel-cards,
+  .travel-cards {
+    grid-template-columns: 1fr;
+  }
+
   .hotel-list {
     grid-template-columns: 1fr;
   }
@@ -1227,86 +230,27 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .stay-section {
-    padding: 2rem 1.25rem;
-  }
-
-  .countdown {
-    gap: 0.4rem;
-  }
-
-  .countdown-unit {
-    min-width: 65px;
-  }
-
-  .countdown-number {
-    font-size: 2.4rem;
-  }
-
-  .countdown-label {
-    font-size: 0.52rem;
-    letter-spacing: 0.1em;
-  }
-
-  .countdown-divider {
-    padding-bottom: 1.1rem;
-    font-size: 0.9rem;
+  .nav-links {
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .navigation {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3.2rem, 16vw, 5rem);
   }
 
-  .hero-subtitle {
-    letter-spacing: 0.2em;
-  }
-
-  .wedding-date {
-    font-size: 1.1rem;
-  }
-
-  .story-letter {
-    padding: 1.6rem;
+  .section {
+    padding: 4.5rem 1rem;
   }
 
   .details-main-card {
-    padding: 2.3rem 1.25rem;
-  }
-
-  .date-note {
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .winter-note {
-    padding: 1.2rem 1rem;
-  }
-
-  .winter-note span {
-    display: none;
-  }
-
-  .rsvp-date {
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .rsvp-date span:nth-child(2) {
-    display: none;
-  }
-
-  .countdown-unit {
-    min-width: 58px;
-  }
-
-  .countdown-number {
-    font-size: 2rem;
-  }
-
-  .countdown-label {
-    font-size: 0.47rem;
-  }
-}
+    padding: 2.4rem 1.25rem;
