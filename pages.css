@@ -1535,3 +1535,95 @@ body > header nav > div a[href="rsvp.html"] {
   }
 
 }
+
+/* =====================================
+   SOPHIE & DRAVEN — RSVP FOOTER
+   ===================================== */
+
+footer.rsvp-footer {
+  background: #203b33;
+  color: #f7f4ed;
+  padding: 65px 20px 30px;
+  text-align: center;
+}
+
+.rsvp-footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rsvp-footer-monogram {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 46px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #f7f4ed;
+}
+
+.rsvp-footer-monogram span {
+  color: #d8aab5;
+  font-style: italic;
+}
+
+.rsvp-footer-heart {
+  color: #d8aab5;
+  font-size: 13px;
+  margin: 15px 0 20px;
+}
+
+.rsvp-footer-date {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #e6e9e3;
+  margin: 0 0 10px;
+}
+
+.rsvp-footer-location {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+  color: #e6e9e3;
+  margin: 0 0 28px;
+}
+
+.rsvp-footer-link {
+  display: inline-block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #f7f4ed;
+  text-decoration: none;
+  border-bottom: 1px solid #d8aab5;
+  padding-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.rsvp-footer-link:hover {
+  color: #d8aab5;
+}
+
+.rsvp-footer-bottom {
+  margin: 55px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(247, 244, 237, 0.18);
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #b9c8bf;
+}
+
+/* Mobile footer */
+
+@media (max-width: 600px) {
+  footer.rsvp-footer {
+    padding: 50px 20px 25px;
+  }
+
+  .rsvp-footer-monogram {
+    font-size: 40px;
+  }
+
+  .rsvp-footer-bottom {
+    margin-top: 40px;
+  }
+}
