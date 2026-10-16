@@ -2775,3 +2775,147 @@ p {
   background-repeat: no-repeat;
   background-color: #29473f;
 }
+
+/* ==========================
+   IPHONE / MOBILE DESIGN
+   ========================== */
+
+@media screen and (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Mountain hero */
+  .hero {
+    min-height: 100svh;
+    padding: 0 16px;
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 70px 10px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3rem, 12vw, 4.8rem);
+    line-height: 1.1;
+  }
+
+  .hero-subtitle,
+  .wedding-date,
+  .hero-location {
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+
+  /* Navigation */
+  .navigation {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  /* Wedding countdown */
+  .countdown-section {
+    padding: 60px 16px;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .countdown-unit {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .countdown-number {
+    font-size: clamp(1.9rem, 9vw, 3rem);
+  }
+
+  .countdown-label {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+
+  .countdown-divider {
+    font-size: 1rem;
+  }
+
+  /* Wedding sections */
+  .section {
+    padding: 65px 18px;
+  }
+
+  .section h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  /* Cards */
+  .detail-cards,
+  .travel-cards,
+  .hotel-list,
+  .fund-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .story-letter,
+  .details-main-card,
+  .detail-card,
+  .travel-card,
+  .hotel-item,
+  .fund-card,
+  .rsvp-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 20px;
+  }
+
+  /* Buttons */
+  .button,
+  .fund-button {
+    max-width: 100%;
+    min-height: 44px;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 18px;
+    text-align: center;
+  }
+}
+
+/* Mobile navigation */
+
+@media screen and (max-width: 768px) {
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+}
