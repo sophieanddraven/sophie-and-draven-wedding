@@ -3313,3 +3313,33 @@ p {
   z-index: 102;
   pointer-events: auto;
 }
+
+/* Elegant hero snowflake */
+
+.hero-snowflake {
+  display: block;
+  width: 34px;
+  height: 34px;
+  color: #d5e2e5;
+  margin: 28px auto;
+  opacity: 0.85;
+}
+
+/* More delicate winter details on the homepage */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("winter-details.svg");
+  background-repeat: repeat;
+  background-size: 360px;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: -1;
+}
