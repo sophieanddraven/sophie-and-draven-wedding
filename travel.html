@@ -1,348 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Travel & Stay | Sophie & Draven</title>
-
+  <meta name="description" content="Travel tips, hotels, and our favorite Great Falls places for Sophie and Draven's wedding on December 9, 2028.">
+  <title>Travel &amp; Stay | Sophie &amp; Draven</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="pages.css?v=6">
+  <link rel="stylesheet" href="pages.css?v=7">
+  <style>
+    /* Additional Travel sections, scoped to this page */
+    .travel-hotels, .travel-favorites {max-width:1100px;margin:0 auto 80px;text-align:center}
+    .travel-hotels h2,.travel-favorites h2 {font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,6vw,55px);font-weight:500;color:#203b33;margin:15px 0 20px}
+    .travel-hotels-intro,.travel-favorites-intro {max-width:660px;margin:0 auto 35px;color:#66716f;font-size:15px;line-height:1.9}
+    .travel-hotels-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .travel-hotel-card,.travel-favorite-card {display:flex;flex-direction:column;align-items:center;background:#fff;border:1px solid #d5e2e5;border-radius:6px;padding:35px 25px}
+    .travel-hotel-icon,.travel-favorite-icon {display:block;color:#874452;font-size:25px;margin-bottom:15px}
+    .travel-hotel-card h3,.travel-favorite-card h4 {font-family:'Cormorant Garamond',Georgia,serif;font-size:29px;font-weight:500;color:#203b33;margin:0 0 14px}
+    .travel-hotel-card p,.travel-favorite-card p {color:#66716f;font-size:14px;line-height:1.8;margin:0 0 25px;flex-grow:1}
+    .travel-hotel-link,.travel-favorite-card a,.travel-showdown a {display:inline-block;background:#203b33;color:#fff!important;padding:12px 24px;border-radius:3px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:1px;transition:background .2s ease}
+    .travel-hotel-link:hover,.travel-favorite-card a:hover,.travel-showdown a:hover {background:#36564f}
+    .travel-hotels-note {max-width:760px;margin:28px auto 0;color:#66716f;font-size:13px;line-height:1.9}
+    .travel-category {font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:500;color:#203b33;margin:48px 0 22px}
+    .travel-favorites-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .travel-showdown {max-width:800px;margin:65px auto 0;padding:55px 35px;background:#eaf0eb;border:1px solid #d5e2e5;border-radius:6px;text-align:center}
+    .travel-showdown h3 {font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(38px,6vw,52px);font-weight:500;color:#203b33;margin:15px 0 20px}
+    .travel-showdown p {max-width:600px;margin:0 auto 18px;color:#66716f;font-size:15px;line-height:1.9}
+    .travel-showdown a {margin-top:15px}
+    .travel-showdown .travel-showdown-note {margin:25px auto 0;font-size:12px}
+    .travel-card-link {display:inline-block;margin-top:8px}
+    @media(max-width:750px){.travel-hotels-grid,.travel-favorites-grid{grid-template-columns:1fr;gap:16px}.travel-hotels,.travel-favorites{margin-bottom:60px}.travel-showdown{padding:40px 22px;margin-top:45px}}
+  </style>
 </head>
-
 <body>
-
-<!-- NAVIGATION -->
-
 <header>
   <nav>
-    <a href="index.html">S & D</a>
-
+    <a href="index.html">S &amp; D</a>
     <div>
       <a href="story.html">Our Story</a>
       <a href="details.html">Wedding</a>
-      <a href="travel.html">Travel</a>
+      <a href="travel.html" aria-current="page">Travel</a>
       <a href="photos.html">Photos</a>
       <a href="registry.html">Registry</a>
       <a href="rsvp.html">RSVP</a>
     </div>
   </nav>
 </header>
-
 <main>
-
-  <!-- TRAVEL HERO -->
-
   <section class="page-hero">
     <div class="page-hero-inner">
-
-      <div class="page-eyebrow">
-        Welcome to Montana
-      </div>
-
-      <h1 class="page-title">Travel & Stay</h1>
-
-      <p class="page-subtitle">
-        A little guide to celebrating with us
-        in Great Falls, Montana.
-      </p>
-
+      <div class="page-eyebrow">Welcome to Montana</div>
+      <h1 class="page-title">Travel &amp; Stay</h1>
+      <p class="page-subtitle">A little guide to celebrating with us in Great Falls, Montana.</p>
     </div>
   </section>
-
-  <!-- TRAVEL CONTENT -->
-
   <section class="page-content travel-page">
-
-    <!-- WELCOME -->
-
     <div class="travel-intro">
-
       <span class="travel-heart">♥</span>
-
-      <div class="section-kicker">
-        A Little Hometown Welcome
-      </div>
-
+      <div class="section-kicker">A Little Hometown Welcome</div>
       <h2>Meet Us in Montana</h2>
-
-      <p>
-        Great Falls is where our story began, and
-        we couldn't imagine a better place to
-        celebrate our wedding.
-      </p>
-
-      <p>
-        Whether you're coming from nearby or
-        traveling across the country, we're so
-        grateful you're making the trip to
-        celebrate with us!
-      </p>
-
+      <p>Great Falls is our hometown, and we couldn't imagine a better place to celebrate our wedding.</p>
+      <p>Whether you're coming from nearby or traveling across the country, we're so grateful you're making the trip to celebrate with us!</p>
     </div>
-
-    <!-- TRAVEL INFORMATION CARDS -->
-
     <div class="travel-info-grid">
-
-      <!-- GETTING HERE -->
-
       <div class="travel-info-card">
-
         <div class="travel-card-symbol">✈</div>
-
         <h3>Getting Here</h3>
-
-        <p>
-          Great Falls is located in central Montana.
-          If you're flying, Great Falls International
-          Airport (GTF) is the closest airport.
-        </p>
-
-        <p>
-          If you're driving, please keep an eye
-          on road conditions, especially during
-          the winter months.
-        </p>
-
-<a href="https://flygtf.com/"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="travel-hotel-link">
-  Great Falls Airport ↗
-</a>
-
+        <p>Great Falls is located in central Montana. If you're flying, Great Falls International Airport (GTF) is the closest airport.</p>
+        <p>If you're driving, please keep an eye on road conditions, especially during the winter months.</p>
+        <a class="travel-hotel-link travel-card-link" href="https://flygtf.com/" target="_blank" rel="noopener noreferrer">Great Falls Airport ↗</a>
       </div>
-
-      <!-- WHERE TO STAY -->
-
       <div class="travel-info-card">
-
         <div class="travel-card-symbol">⌂</div>
-
         <h3>Where to Stay</h3>
-
-        <p>
-          Great Falls has plenty of hotels and
-          accommodations for our out-of-town guests.
-        </p>
-
-        <p>
-          We'll share our hotel recommendations
-          and any room block information as our
-          wedding plans come together.
-        </p>
-
+        <p>We've gathered a few hotel suggestions below to make planning your visit a little easier.</p>
+        <p>You're welcome to book whichever accommodations work best for you. Guests will be responsible for their own travel and lodging expenses.</p>
       </div>
-
-      <!-- GETTING AROUND -->
-
       <div class="travel-info-card">
-
         <div class="travel-card-symbol">✧</div>
-
         <h3>Getting Around</h3>
-
-        <p>
-          Renting a car may be helpful if you're
-          flying into Great Falls, especially if
-          you'd like to explore the area.
-        </p>
-
-        <p>
-          We'll share more details about parking
-          and transportation once our wedding
-          venue is finalized.
-        </p>
-
+        <p>Renting a car may be helpful if you're flying into Great Falls, especially if you'd like to explore the area.</p>
+        <p>Some of our favorite places are a little outside town, so having a vehicle can make your visit more flexible.</p>
       </div>
-
-      <!-- WINTER WEATHER -->
-
       <div class="travel-info-card">
-
         <div class="travel-card-symbol">❄</div>
-
         <h3>Winter in Montana</h3>
-
-        <p>
-          December in Montana can be beautiful,
-          snowy, and very cold!
-        </p>
-
-        <p>
-          We recommend bringing warm layers,
-          a winter coat, and shoes that can
-          handle snow or ice. Give yourself
-          a little extra travel time, too.
-        </p>
-
-<a href="https://www.511mt.net/"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="travel-hotel-link">
-  Check Montana Road Conditions ↗
-</a>
-
+        <p>December in Montana can be beautiful, snowy, and very cold!</p>
+        <p>We recommend bringing warm layers, a winter coat, and shoes that can handle snow or ice. Give yourself a little extra travel time, too.</p>
+        <a class="travel-hotel-link travel-card-link" href="https://www.511mt.net/" target="_blank" rel="noopener noreferrer">Montana Road Conditions ↗</a>
       </div>
-
     </div>
-
-<!-- HOTEL RECOMMENDATIONS -->
-
-<section class="travel-hotels">
-
-  <div class="section-kicker">Rest Your Head</div>
-
-  <h2>Places to Stay</h2>
-
-  <p class="travel-hotels-intro">
-    For our guests traveling to Great Falls,
-    here are a few lovely places to stay.
-    We recommend exploring your options and
-    finding somewhere that feels right for you!
-  </p>
-
-  <div class="travel-hotels-grid">
-
-    <div class="travel-hotel-card">
-      <span class="travel-hotel-icon">♡</span>
-      <h3>Hotel Arvon</h3>
-      <p>
-        A charming historic boutique hotel in
-        downtown Great Falls, with a cozy Montana
-        atmosphere and a little local character.
-      </p>
-      <a href="https://www.hotelarvon.com/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="travel-hotel-link">
-        View Hotel ↗
-      </a>
-    </div>
-
-    <div class="travel-hotel-card">
-      <span class="travel-hotel-icon">✧</span>
-      <h3>SpringHill Suites</h3>
-      <p>
-        A modern, comfortable hotel along the
-        Missouri River with spacious suites
-        and beautiful river views.
-      </p>
-      <a href="https://www.marriott.com/en-us/hotels/gtfsh-springhill-suites-great-falls/overview/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="travel-hotel-link">
-        View Hotel ↗
-      </a>
-    </div>
-
-    <div class="travel-hotel-card">
-      <span class="travel-hotel-icon">❄</span>
-      <h3>Staybridge Suites</h3>
-      <p>
-        A welcoming riverside hotel with
-        spacious suites and kitchens, perfect
-        for families or a longer Montana visit.
-      </p>
-      <a href="https://www.ihg.com/staybridge/hotels/us/en/great-falls/gtfsb/hoteldetail"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="travel-hotel-link">
-        View Hotel ↗
-      </a>
-    </div>
-
-  </div>
-
-  <p class="travel-hotels-note">
-    These are suggested accommodations, not
-    reserved wedding room blocks. Hotel
-    availability and rates may vary.
-  </p>
-
-</section>
-
-    <!-- EXPLORE GREAT FALLS -->
-
+    <section class="travel-hotels" aria-labelledby="hotels-title">
+      <div class="section-kicker">Rest Your Head</div>
+      <h2 id="hotels-title">Places to Stay</h2>
+      <p class="travel-hotels-intro">Here are a few places to stay in Great Falls. Choose whatever feels most comfortable for your visit!</p>
+      <div class="travel-hotels-grid">
+        <div class="travel-hotel-card">
+          <span class="travel-hotel-icon">♡</span>
+          <h3>Hotel Arvon</h3>
+          <p>A historic boutique hotel in downtown Great Falls, with cozy Montana character.</p>
+          <a class="travel-hotel-link" href="https://www.hotelarvon.com/" target="_blank" rel="noopener noreferrer">View Hotel ↗</a>
+        </div>
+        <div class="travel-hotel-card">
+          <span class="travel-hotel-icon">✧</span>
+          <h3>SpringHill Suites</h3>
+          <p>A modern hotel along the Missouri River, with spacious suites and river views.</p>
+          <a class="travel-hotel-link" href="https://www.marriott.com/en-us/hotels/gtfsh-springhill-suites-great-falls/overview/" target="_blank" rel="noopener noreferrer">View Hotel ↗</a>
+        </div>
+        <div class="travel-hotel-card">
+          <span class="travel-hotel-icon">❄</span>
+          <h3>Staybridge Suites</h3>
+          <p>Spacious suites with kitchens, a convenient option for families or longer visits.</p>
+          <a class="travel-hotel-link" href="https://www.ihg.com/staybridge/hotels/us/en/great-falls/gtfsb/hoteldetail" target="_blank" rel="noopener noreferrer">View Hotel ↗</a>
+        </div>
+      </div>
+      <p class="travel-hotels-note">These are recommendations, not reserved wedding room blocks. Guests are responsible for booking and paying for their own accommodations and travel. Rates and availability may vary. Thank you for making the trip to celebrate with us!</p>
+    </section>
     <div class="travel-explore">
-
-      <div class="section-kicker">
-        While You're Here
-      </div>
-
+      <div class="section-kicker">While You're Here</div>
       <h2>Explore Great Falls</h2>
-
-      <p>
-        If you have some extra time during your
-        visit, we hope you'll get to experience
-        a little of what makes our hometown special.
-      </p>
-
-      <p>
-        We'll share a few of our favorite places
-        to eat, visit, and explore as the
-        wedding gets closer.
-      </p>
-
+      <p>Great Falls is our hometown, and we wanted to share some of our favorite places with you. Whether you're looking for a good meal, a little Montana history, or a winter adventure, here are some spots we love!</p>
     </div>
-
-    <!-- CLOSING MESSAGE -->
-
+    <section class="travel-favorites" aria-labelledby="favorites-title">
+      <div class="section-kicker">A Few of Our Favorites</div>
+      <h2 id="favorites-title">Eat, Explore &amp; Enjoy</h2>
+      <h3 class="travel-category">Eat &amp; Drink</h3>
+      <div class="travel-favorites-grid">
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">✧</span>
+          <h4>Sip 'n Dip Lounge</h4>
+          <p>A one-of-a-kind tiki lounge famous for its swimming mermaids and Great Falls character.</p>
+          <a href="https://ohairemotorinn.com/sip-n-dip/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">♡</span>
+          <h4>Amigo Lounge</h4>
+          <p>A local spot for Taco Treat favorites, Mexican food, and drinks.</p>
+          <a href="https://amigolounge.net/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">✧</span>
+          <h4>Borries Supper Club</h4>
+          <p>A longtime restaurant in Black Eagle with classic supper-club charm.</p>
+          <a href="https://borriessupperclub.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">♡</span>
+          <h4>Five Guys</h4>
+          <p>One of our favorite casual stops for burgers, fries, and milkshakes.</p>
+          <a href="https://restaurants.fiveguys.com/2104-10th-ave-south" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </div>
+      <h3 class="travel-category">Explore &amp; Discover</h3>
+      <div class="travel-favorites-grid">
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">✧</span>
+          <h4>Lewis &amp; Clark Interpretive Center</h4>
+          <p>Learn about the Lewis and Clark Expedition and its journey through this part of Montana.</p>
+          <a href="https://www.lewisandclarkfoundation.org/visit-us" target="_blank" rel="noopener noreferrer">Plan Your Visit ↗</a>
+        </div>
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">♡</span>
+          <h4>C.M. Russell Museum</h4>
+          <p>Explore Western art and the work of Montana artist Charles M. Russell.</p>
+          <a href="https://cmrussell.org/visit/" target="_blank" rel="noopener noreferrer">Plan Your Visit ↗</a>
+        </div>
+        <div class="travel-favorite-card">
+          <span class="travel-favorite-icon">❄</span>
+          <h4>Giant Springs State Park</h4>
+          <p>Enjoy the natural springs and beautiful scenery along the Missouri River.</p>
+          <a href="https://fwp.mt.gov/stateparks/giant-springs" target="_blank" rel="noopener noreferrer">Explore the Park ↗</a>
+        </div>
+      </div>
+      <div class="travel-showdown">
+        <span class="travel-favorite-icon">❄</span>
+        <div class="section-kicker">A Special Place to Us</div>
+        <h3>Showdown Montana</h3>
+        <p>Located in the Little Belt Mountains near Neihart, Showdown holds a special place in our hearts. We ski here every year, and it's one of our favorite places to spend a Montana winter.</p>
+        <p>If you're up for a mountain adventure, we'd love for you to experience this place we love so much!</p>
+        <a href="https://www.showdownmontana.com/" target="_blank" rel="noopener noreferrer">Explore Showdown ↗</a>
+        <p class="travel-showdown-note">Skiing depends on seasonal opening dates, weather, and mountain conditions. Check the website before planning your visit.</p>
+      </div>
+    </section>
     <div class="travel-closing">
-
       <span>♥</span>
-
-      <p>
-        Thank you for traveling near or far
-        to celebrate with us.
-      </p>
-
-      <p class="travel-closing-signature">
-        Love, Sophie & Draven
-      </p>
-
+      <p>Thank you for traveling near or far to celebrate with us.</p>
+      <p class="travel-closing-signature">Love, Sophie &amp; Draven</p>
     </div>
-
   </section>
-
 </main>
-
-<!-- ELEGANT WEDDING FOOTER -->
-
 <footer class="rsvp-footer">
   <div class="rsvp-footer-inner">
-
-    <div class="rsvp-footer-monogram">
-      S <span>&</span> D
-    </div>
-
+    <div class="rsvp-footer-monogram">S <span>&amp;</span> D</div>
     <div class="rsvp-footer-heart">♥</div>
-
-    <p class="rsvp-footer-date">
-      DECEMBER 9, 2028
-    </p>
-
-    <p class="rsvp-footer-location">
-      Great Falls, Montana
-    </p>
-
-    <a href="index.html" class="rsvp-footer-link">
-      Back to Our Wedding Website
-    </a>
-
-    <p class="rsvp-footer-bottom">
-      Made with love, for the people we love.
-    </p>
-
+    <p class="rsvp-footer-date">DECEMBER 9, 2028</p>
+    <p class="rsvp-footer-location">Great Falls, Montana</p>
+    <a href="index.html" class="rsvp-footer-link">Back to Our Wedding Website</a>
+    <p class="rsvp-footer-bottom">Made with love, for the people we love.</p>
   </div>
 </footer>
-
 </body>
 </html>
