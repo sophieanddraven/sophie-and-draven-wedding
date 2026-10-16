@@ -2757,3 +2757,21 @@ p {
   background-size: cover;
   background-color: #29473f;
 }
+
+/* Winter detail update: replace the large hero circles with subtle
+   snowflakes and evergreen silhouettes. */
+.hero::before,
+.hero::after {
+  display: none;
+}
+
+.hero {
+  background-image:
+    url("winter-details.svg"),
+    linear-gradient(135deg, rgba(30,53,48,.82), rgba(41,71,63,.78) 48%, rgba(32,58,53,.86)),
+    url("mountain.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat;
+  background-color: #29473f;
+}
