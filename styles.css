@@ -2919,3 +2919,379 @@ p {
     white-space: nowrap;
   }
 }
+
+/* ==================================
+   WEDDING DETAILS PAGE
+   ================================== */
+
+.details-page-hero {
+  min-height: 430px;
+  padding: 0 25px 75px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, #1f3932, #36564f);
+  text-align: center;
+}
+
+.details-page-nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+
+.details-page-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.details-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+
+.details-page-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.details-page-links a:hover {
+  color: #d5e2e5;
+}
+
+.details-page-heading {
+  padding-top: 85px;
+}
+
+.details-page-heading h1 {
+  color: #fff;
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  margin: 12px 0;
+}
+
+.details-page-heading .eyebrow {
+  color: #d5e2e5;
+}
+
+.details-page-heading > p:last-child {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.details-page-flourish {
+  color: #d5e2e5;
+  margin: 20px 0;
+  font-size: 20px;
+  letter-spacing: 12px;
+}
+
+/* INTRO */
+
+.details-page-intro {
+  padding: 95px 20px;
+  text-align: center;
+  background: #fcfaf7;
+}
+
+.details-page-intro h2,
+.details-page-section-heading h2,
+.details-page-dress h2 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+}
+
+.details-page-intro > p:not(.eyebrow) {
+  max-width: 630px;
+  margin: 20px auto;
+  color: #66716f;
+}
+
+.details-page-ornament {
+  color: #874452;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+/* SHARED SECTION HEADINGS */
+
+.details-page-section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.details-page-section-heading > p:last-child {
+  color: #66716f;
+}
+
+/* VENUE */
+
+.details-page-venue {
+  padding: 90px 20px;
+  background: #eaf1f2;
+}
+
+.details-page-venue-card {
+  max-width: 740px;
+  margin: auto;
+  padding: 65px 25px;
+  background: #fff;
+  border: 1px solid #d5e2e5;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(31,57,50,.06);
+}
+
+.details-page-venue-card h3 {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  margin: 10px 0;
+}
+
+.details-page-venue-card > p {
+  margin-bottom: 6px;
+}
+
+.details-page-icon {
+  color: #874452;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.details-page-line {
+  width: 70px;
+  height: 1px;
+  background: #b7aa9d;
+  margin: 35px auto;
+}
+
+.details-page-button {
+  display: inline-block;
+  padding: 13px 28px;
+  margin-top: 28px;
+  color: #fff;
+  background: #1f3932;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.details-page-note {
+  font-size: 12px;
+  color: #66716f;
+  margin-top: 24px;
+  font-style: italic;
+}
+
+/* TIMELINE */
+
+.details-page-schedule {
+  padding: 100px 20px;
+  background: #fcfaf7;
+}
+
+.details-page-timeline {
+  max-width: 660px;
+  margin: auto;
+  border-left: 1px solid #b7aa9d;
+  padding-left: 35px;
+}
+
+.details-page-event {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  padding: 0 0 48px;
+}
+
+.details-page-event:last-child {
+  padding-bottom: 0;
+}
+
+.details-page-event-symbol {
+  position: absolute;
+  left: -49px;
+  top: 0;
+  background: #fcfaf7;
+  color: #874452;
+  font-size: 22px;
+  width: 27px;
+  text-align: center;
+}
+
+.details-page-event h3 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.details-page-event p {
+  color: #66716f;
+  margin: 0;
+}
+
+/* DRESS CODE */
+
+.details-page-dress {
+  background: #1f3932;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.details-page-dress-inner {
+  max-width: 650px;
+  margin: auto;
+}
+
+.details-page-dress h2 {
+  color: #fff;
+}
+
+.details-page-dress .eyebrow {
+  color: #d5e2e5;
+}
+
+.details-page-dress p {
+  color: #eaf1f2;
+}
+
+.details-page-dress .details-page-note {
+  color: #d5e2e5;
+}
+
+/* ADDITIONAL DETAILS */
+
+.details-page-extra {
+  padding: 100px 20px;
+  background: #f7f8f6;
+}
+
+.details-page-extra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  margin: auto;
+  gap: 22px;
+}
+
+.details-page-extra-card {
+  padding: 40px 28px;
+  background: #fff;
+  border: 1px solid #d5e2e5;
+  text-align: center;
+}
+
+.details-page-extra-card span {
+  font-size: 25px;
+  color: #874452;
+}
+
+.details-page-extra-card h3 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.details-page-extra-card p {
+  color: #66716f;
+  font-size: 14px;
+}
+
+.details-page-extra-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #1f3932;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.details-page-footer {
+  background: #1f3932;
+  color: #eaf1f2;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.details-page-footer-names {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #fff;
+}
+
+.details-page-footer > span {
+  display: block;
+  margin: 15px;
+  color: #d5e2e5;
+}
+
+.details-page-footer > a {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+/* IPHONE & SMALL SCREENS */
+
+@media (max-width: 768px) {
+
+  .details-page-hero {
+    min-height: 380px;
+    padding: 0 18px 55px;
+  }
+
+  .details-page-nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .details-page-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .details-page-links a {
+    font-size: 10px;
+  }
+
+  .details-page-heading {
+    padding-top: 60px;
+  }
+
+  .details-page-intro,
+  .details-page-venue,
+  .details-page-schedule,
+  .details-page-extra {
+    padding: 65px 18px;
+  }
+
+  .details-page-venue-card {
+    padding: 45px 20px;
+  }
+
+  .details-page-extra-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-page-timeline {
+    padding-left: 28px;
+  }
+
+  .details-page-event-symbol {
+    left: -42px;
+  }
+
+  .details-page-event {
+    gap: 12px;
+  }
+}
