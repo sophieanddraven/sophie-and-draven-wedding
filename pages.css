@@ -1836,3 +1836,100 @@ body footer.rsvp-footer .rsvp-footer-bottom {
     margin-bottom: 50px;
   }
 }
+
+/* TRAVEL PAGE — HOTEL RECOMMENDATIONS */
+
+.travel-hotels {
+  max-width: 1100px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.travel-hotels h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(40px, 6vw, 55px);
+  font-weight: 500;
+  color: #203b33;
+  margin: 15px 0 20px;
+}
+
+.travel-hotels-intro {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #66716f;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.travel-hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.travel-hotel-card {
+  background: #fff;
+  border: 1px solid #d5e2e5;
+  border-radius: 6px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel-hotel-icon {
+  color: #874452;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.travel-hotel-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 29px;
+  font-weight: 500;
+  color: #203b33;
+  margin: 0 0 15px;
+}
+
+.travel-hotel-card p {
+  color: #66716f;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 25px;
+  flex-grow: 1;
+}
+
+.travel-hotel-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #203b33;
+  color: #fff;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.travel-hotel-link:hover {
+  background: #36564f;
+}
+
+.travel-hotels-note {
+  margin: 25px auto 0;
+  color: #66716f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 750px) {
+  .travel-hotels-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .travel-hotels {
+    margin-bottom: 60px;
+  }
+}
