@@ -465,16 +465,15 @@
   }
 }
 
-/* ==================================
-   WEDDING DETAILS PAGE
-   ================================== */
+/* ================================
+   NEW WEDDING DETAILS PAGE
+   ================================ */
 
 .details-page-hero {
   min-height: 430px;
   padding: 0 25px 75px;
-  color: #fff;
-  background:
-    linear-gradient(135deg, #1f3932, #36564f);
+  background: linear-gradient(135deg, #1f3932, #36564f);
+  color: white;
   text-align: center;
 }
 
@@ -490,9 +489,9 @@
 }
 
 .details-page-logo {
+  color: white;
   font-family: "Playfair Display", serif;
   font-size: 24px;
-  color: #fff;
   text-decoration: none;
 }
 
@@ -503,15 +502,11 @@
 }
 
 .details-page-links a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-.details-page-links a:hover {
-  color: #d5e2e5;
 }
 
 .details-page-heading {
@@ -519,7 +514,7 @@
 }
 
 .details-page-heading h1 {
-  color: #fff;
+  color: white;
   font-size: clamp(3.2rem, 7vw, 5.5rem);
   margin: 12px 0;
 }
@@ -540,7 +535,7 @@
   letter-spacing: 12px;
 }
 
-/* INTRO */
+/* INTRODUCTION */
 
 .details-page-intro {
   padding: 95px 20px;
@@ -566,18 +561,6 @@
   margin-top: 30px;
 }
 
-/* SHARED SECTION HEADINGS */
-
-.details-page-section-heading {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 45px;
-}
-
-.details-page-section-heading > p:last-child {
-  color: #66716f;
-}
-
 /* VENUE */
 
 .details-page-venue {
@@ -585,11 +568,17 @@
   background: #eaf1f2;
 }
 
+.details-page-section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
 .details-page-venue-card {
   max-width: 740px;
   margin: auto;
   padding: 65px 25px;
-  background: #fff;
+  background: white;
   border: 1px solid #d5e2e5;
   text-align: center;
   box-shadow: 0 15px 40px rgba(31,57,50,.06);
@@ -598,10 +587,6 @@
 .details-page-venue-card h3 {
   font-size: clamp(1.7rem, 4vw, 2.3rem);
   margin: 10px 0;
-}
-
-.details-page-venue-card > p {
-  margin-bottom: 6px;
 }
 
 .details-page-icon {
@@ -621,7 +606,7 @@
   display: inline-block;
   padding: 13px 28px;
   margin-top: 28px;
-  color: #fff;
+  color: white;
   background: #1f3932;
   text-decoration: none;
   font-size: 11px;
@@ -635,7 +620,7 @@
   font-style: italic;
 }
 
-/* TIMELINE */
+/* WEDDING DAY TIMELINE */
 
 .details-page-schedule {
   padding: 100px 20px;
@@ -653,7 +638,7 @@
   position: relative;
   display: flex;
   gap: 25px;
-  padding: 0 0 48px;
+  padding-bottom: 48px;
 }
 
 .details-page-event:last-child {
@@ -684,10 +669,10 @@
 /* DRESS CODE */
 
 .details-page-dress {
-  background: #1f3932;
-  color: #fff;
-  text-align: center;
   padding: 90px 20px;
+  background: #1f3932;
+  color: white;
+  text-align: center;
 }
 
 .details-page-dress-inner {
@@ -696,10 +681,11 @@
 }
 
 .details-page-dress h2 {
-  color: #fff;
+  color: white;
 }
 
-.details-page-dress .eyebrow {
+.details-page-dress .eyebrow,
+.details-page-dress .details-page-note {
   color: #d5e2e5;
 }
 
@@ -707,11 +693,7 @@
   color: #eaf1f2;
 }
 
-.details-page-dress .details-page-note {
-  color: #d5e2e5;
-}
-
-/* ADDITIONAL DETAILS */
+/* EXTRA INFORMATION */
 
 .details-page-extra {
   padding: 100px 20px;
@@ -728,7 +710,7 @@
 
 .details-page-extra-card {
   padding: 40px 28px;
-  background: #fff;
+  background: white;
   border: 1px solid #d5e2e5;
   text-align: center;
 }
@@ -770,7 +752,7 @@
 .details-page-footer-names {
   font-family: "Playfair Display", serif;
   font-size: 28px;
-  color: #fff;
+  color: white;
 }
 
 .details-page-footer > span {
@@ -780,16 +762,15 @@
 }
 
 .details-page-footer > a {
-  color: #fff;
+  color: white;
   font-size: 11px;
   letter-spacing: 1.5px;
   text-decoration: none;
 }
 
-/* IPHONE & SMALL SCREENS */
+/* IPHONE COMPATIBILITY */
 
 @media (max-width: 768px) {
-
   .details-page-hero {
     min-height: 380px;
     padding: 0 18px 55px;
@@ -834,9 +815,5 @@
 
   .details-page-event-symbol {
     left: -42px;
-  }
-
-  .details-page-event {
-    gap: 12px;
   }
 }
