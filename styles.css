@@ -3356,3 +3356,77 @@ p {
   color: #d5e2e5;
   opacity: 0.8;
 }
+
+/* =========================================
+   FINAL HOMEPAGE WINTER GRAPHICS FIX
+   iPhone + Desktop
+   ========================================= */
+
+/* Preserve the existing forest-green background */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Show the original winter artwork clearly */
+.hero::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("winter-details.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 100%;
+
+  opacity: 0.85;
+  border-radius: 0;
+  filter: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep all text and links above the artwork */
+.hero .navigation,
+.hero .hero-content,
+.hero .hero-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+/* Small snowflake between the names and date */
+.hero .hero-snowflake {
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+
+  margin: 18px auto !important;
+  color: #d5e2e5;
+  opacity: 0.9;
+  flex: none;
+}
+
+/* Mobile-specific winter decorations */
+@media screen and (max-width: 768px) {
+  .hero::before {
+    background-size: 100% 100%;
+    background-position: center bottom;
+    opacity: 1;
+  }
+
+  .hero .hero-snowflake {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+  }
+}
