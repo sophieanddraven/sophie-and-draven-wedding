@@ -839,3 +839,477 @@
   width: 36px;
   height: 36px;
 }
+
+/* ==========================================
+   OUR STORY — WINTER EDITORIAL DESIGN
+   ========================================== */
+
+.story-page {
+  background: #fcfaf7;
+  color: #293331;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* NAVIGATION */
+
+.story-page .story-header {
+  background: #1f3932;
+}
+
+.story-page .story-nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 25px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.story-page .story-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.story-page .story-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.story-page .story-nav-links a {
+  color: #eaf1f2;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.story-page .story-nav-links a:hover {
+  color: #afc7cc;
+}
+
+/* HERO */
+
+.story-page .story-hero {
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 95px 24px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, #1f3932, #36564f);
+  color: white;
+}
+
+.story-page .story-hero-content {
+  max-width: 800px;
+}
+
+.story-page .story-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #874452;
+  margin-bottom: 18px;
+}
+
+.story-page .story-hero .story-eyebrow,
+.story-page .story-closing .story-eyebrow {
+  color: #d5e2e5;
+}
+
+.story-page .story-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  color: white;
+}
+
+.story-page .story-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 30px auto;
+}
+
+.story-page .story-divider span:not(.story-diamond) {
+  width: 60px;
+  height: 1px;
+  background: #afc7cc;
+}
+
+.story-page .story-diamond {
+  width: 8px;
+  height: 8px;
+  background: #d5e2e5;
+  transform: rotate(45deg);
+}
+
+.story-page .story-divider.dark span:not(.story-diamond) {
+  background: #b7aa9d;
+}
+
+.story-page .story-divider.dark .story-diamond {
+  background: #874452;
+}
+
+.story-page .story-hero-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.5;
+  color: #eaf1f2;
+  max-width: 560px;
+  margin: auto;
+}
+
+.story-page .story-hero-date {
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 35px;
+  color: #d5e2e5;
+}
+
+/* INTRODUCTION */
+
+.story-page .story-intro {
+  padding: 110px 24px;
+  background: #fcfaf7;
+  text-align: center;
+}
+
+.story-page .story-intro-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.story-page .story-intro h2,
+.story-page .story-section-heading h2,
+.story-page .story-gallery-preview h2,
+.story-page .story-closing h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: #1f3932;
+  margin: 10px 0;
+}
+
+.story-page .story-lead {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.65rem;
+  color: #36564f;
+  margin: 30px auto;
+}
+
+.story-page .story-letter {
+  text-align: left;
+  padding: 55px;
+  background: white;
+  border: 1px solid #e5e7e2;
+  box-shadow: 0 15px 45px rgba(31,57,50,.05);
+}
+
+.story-page .story-letter p {
+  font-size: 15px;
+  line-height: 2;
+  color: #4e5956;
+  margin-bottom: 22px;
+}
+
+.story-page .story-letter-ending {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px !important;
+  font-style: italic;
+  color: #874452 !important;
+  text-align: center;
+  margin-top: 35px;
+}
+
+/* FEATURED MEMORY */
+
+.story-page .story-memory-feature {
+  padding: 100px 24px;
+  background: #eaf1f2;
+}
+
+.story-page .story-memory-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.story-page .story-photo-placeholder {
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    linear-gradient(135deg, #d5e2e5, #afc7cc);
+  border: 12px solid white;
+  box-shadow: 0 18px 40px rgba(31,57,50,.1);
+}
+
+.story-page .story-photo-placeholder span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #36564f;
+}
+
+.story-page .story-photo-placeholder p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  color: #36564f;
+  margin-top: 12px;
+}
+
+.story-page .story-memory-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  color: #1f3932;
+  line-height: 1.1;
+}
+
+.story-page .story-memory-text > p:not(.story-eyebrow) {
+  color: #66716f;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+
+/* BUTTON */
+
+.story-page .story-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #1f3932;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: background .3s ease;
+}
+
+.story-page .story-button:hover {
+  background: #36564f;
+}
+
+/* TIMELINE */
+
+.story-page .story-timeline-section {
+  padding: 110px 24px;
+  background: #fcfaf7;
+}
+
+.story-page .story-section-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.story-page .story-section-heading > p:last-child {
+  color: #66716f;
+}
+
+.story-page .story-timeline {
+  max-width: 750px;
+  margin: auto;
+  border-left: 1px solid #b7aa9d;
+  padding-left: 45px;
+}
+
+.story-page .story-timeline-item {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.story-page .story-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.story-page .story-timeline-dot {
+  position: absolute;
+  left: -53px;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  background: #874452;
+  border: 4px solid #fcfaf7;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #874452;
+}
+
+.story-page .story-timeline-date {
+  color: #874452;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.story-page .story-timeline-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #1f3932;
+  margin: 8px 0 15px;
+}
+
+.story-page .story-timeline-content p:last-child {
+  color: #66716f;
+  line-height: 1.9;
+}
+
+/* PHOTO PREVIEW */
+
+.story-page .story-gallery-preview {
+  padding: 110px 24px;
+  background: #eaf1f2;
+  text-align: center;
+}
+
+.story-page .story-gallery-preview > p:not(.story-eyebrow) {
+  color: #66716f;
+}
+
+.story-page .story-gallery-grid {
+  max-width: 1100px;
+  margin: 50px auto 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.story-page .story-gallery-placeholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5e2e5;
+  border: 8px solid white;
+  color: #36564f;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* CLOSING */
+
+.story-page .story-closing {
+  padding: 110px 24px;
+  text-align: center;
+  background: #1f3932;
+}
+
+.story-page .story-closing h2 {
+  color: white;
+}
+
+.story-page .story-closing > p:not(.story-eyebrow) {
+  color: #d5e2e5;
+}
+
+.story-page .story-closing-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #afc7cc;
+  padding-bottom: 8px;
+}
+
+/* FOOTER */
+
+.story-page .story-footer {
+  background: #172e29;
+  padding: 45px 20px;
+  text-align: center;
+  color: #d5e2e5;
+}
+
+.story-page .story-footer-names {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: white;
+}
+
+.story-page .story-footer a {
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+/* IPHONE / MOBILE */
+
+@media (max-width: 768px) {
+
+  .story-page .story-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .story-page .story-nav-links {
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  .story-page .story-nav-links a {
+    font-size: 10px;
+  }
+
+  .story-page .story-hero {
+    min-height: 400px;
+    padding: 70px 20px;
+  }
+
+  .story-page .story-intro,
+  .story-page .story-memory-feature,
+  .story-page .story-timeline-section,
+  .story-page .story-gallery-preview,
+  .story-page .story-closing {
+    padding: 70px 20px;
+  }
+
+  .story-page .story-letter {
+    padding: 30px 24px;
+  }
+
+  .story-page .story-memory-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-page .story-photo-placeholder {
+    min-height: 350px;
+  }
+
+  .story-page .story-timeline {
+    padding-left: 30px;
+  }
+
+  .story-page .story-timeline-dot {
+    left: -38px;
+  }
+
+  .story-page .story-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-page .story-gallery-placeholder {
+    min-height: 250px;
+  }
+}
