@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Celebrate the wedding of Sophie and Draven on December 9, 2028, in Great Falls, Montana."
-  >
-
   <title>Sophie & Draven | December 9, 2028</title>
 
-  <!-- Google Fonts -->
+  <meta
+    name="description"
+    content="Celebrate Sophie and Draven's wedding on December 9, 2028, in Great Falls, Montana."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,1000 +19,847 @@
     rel="stylesheet"
   >
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+
+  <style>
+    /* =====================================================
+       HOMEPAGE
+       ===================================================== */
+
+    .home-hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 90px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255,255,255,.95),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 70%,
+          rgba(213,226,229,.75),
+          transparent 38%
+        ),
+        linear-gradient(
+          145deg,
+          #fcfaf7 0%,
+          #eef3f3 50%,
+          #e5edef 100%
+        );
+    }
+
+    .home-hero::before,
+    .home-hero::after {
+      content: "✦";
+      position: absolute;
+      color: rgba(135,68,82,.28);
+      font-size: 1rem;
+    }
+
+    .home-hero::before {
+      top: 22%;
+      left: 13%;
+    }
+
+    .home-hero::after {
+      right: 14%;
+      bottom: 24%;
+      font-size: .8rem;
+    }
+
+    .home-hero-inner {
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .home-eyebrow {
+      font-family: "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: .7rem;
+      color: var(--cranberry);
+      margin-bottom: 28px;
+    }
+
+    .home-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(4.2rem, 11vw, 9rem);
+      line-height: .78;
+      font-weight: 500;
+      color: var(--pine);
+      margin: 0;
+    }
+
+    .home-ampersand {
+      display: block;
+      font-size: .5em;
+      line-height: .9;
+      color: var(--cranberry);
+      margin: 8px 0;
+      font-style: italic;
+    }
+
+    .home-subtitle {
+      margin: 35px 0 8px;
+      font-family: "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .72rem;
+      color: var(--spruce);
+    }
+
+    .home-date {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      letter-spacing: .08em;
+      color: var(--text);
+      margin-top: 12px;
+    }
+
+    .home-location {
+      font-family: "DM Sans", sans-serif;
+      font-size: .75rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .home-ornament {
+      margin: 30px auto 0;
+      color: var(--cranberry);
+      font-size: 1.1rem;
+      letter-spacing: .5em;
+    }
+
+    .home-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .6rem;
+      color: var(--muted);
+    }
+
+    /* COUNTDOWN */
+
+    .home-countdown {
+      padding: 75px 24px;
+      text-align: center;
+      background: var(--ivory);
+      border-top: 1px solid rgba(54,86,79,.08);
+      border-bottom: 1px solid rgba(54,86,79,.08);
+    }
+
+    .countdown-kicker {
+      font-family: "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .68rem;
+      color: var(--cranberry);
+      margin-bottom: 12px;
+    }
+
+    .countdown-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: var(--pine);
+      margin: 0 0 35px;
+    }
+
+    .countdown-grid {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .countdown-unit {
+      padding: 24px 10px;
+    }
+
+    .countdown-number {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      line-height: 1;
+      color: var(--pine);
+    }
+
+    .countdown-label {
+      display: block;
+      margin-top: 10px;
+      font-family: "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .58rem;
+      color: var(--muted);
+    }
+
+    .countdown-divider {
+      color: var(--cranberry);
+      font-size: .7rem;
+    }
+
+    /* HOME PREVIEW SECTIONS */
+
+    .home-section {
+      padding: 100px 24px;
+    }
+
+    .home-section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .home-section-soft {
+      background: var(--winter);
+    }
+
+    .home-section-ivory {
+      background: var(--ivory);
+    }
+
+    .home-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .home-preview.reverse {
+      direction: rtl;
+    }
+
+    .home-preview.reverse > * {
+      direction: ltr;
+    }
+
+    .home-preview-art {
+      min-height: 400px;
+      background:
+        radial-gradient(
+          circle at 25% 25%,
+          rgba(255,255,255,.9),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          var(--ice),
+          var(--winter)
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-preview-art::before {
+      content: "✦";
+      font-family: "Cormorant Garamond", serif;
+      font-size: 5rem;
+      color: rgba(135,68,82,.18);
+    }
+
+    .home-preview-art::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(54,86,79,.16);
+      border-radius: 50%;
+    }
+
+    .home-preview-content .section-kicker {
+      margin-bottom: 10px;
+    }
+
+    .home-preview-content h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: .95;
+      font-weight: 500;
+      color: var(--pine);
+      margin: 0 0 22px;
+    }
+
+    .home-preview-content p {
+      font-family: "DM Sans", sans-serif;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    /* FOUR FEATURE CARDS */
+
+    .home-feature-section {
+      padding: 100px 24px;
+      background: var(--ivory);
+      text-align: center;
+    }
+
+    .home-feature-heading {
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+
+    .home-feature-heading h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: .95;
+      font-weight: 500;
+      color: var(--pine);
+      margin: 0 0 18px;
+    }
+
+    .home-feature-heading p {
+      font-family: "DM Sans", sans-serif;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .home-feature-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .home-feature-card {
+      min-height: 270px;
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: left;
+      text-decoration: none;
+      background: var(--winter);
+      border: 1px solid rgba(54,86,79,.1);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .home-feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(31,57,50,.1);
+    }
+
+    .home-feature-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      color: var(--cranberry);
+    }
+
+    .home-feature-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: var(--pine);
+      margin: 10px 0;
+    }
+
+    .home-feature-card p {
+      font-family: "DM Sans", sans-serif;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .home-feature-arrow {
+      margin-top: 20px;
+      font-family: "DM Sans", sans-serif;
+      font-size: .65rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--cranberry);
+    }
+
+    /* FINAL RSVP */
+
+    .home-final {
+      padding: 120px 24px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(31,57,50,.94),
+          rgba(31,57,50,.94)
+        ),
+        var(--pine);
+      color: white;
+    }
+
+    .home-final .section-kicker {
+      color: #d5e2e5;
+    }
+
+    .home-final h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 500;
+      line-height: .9;
+      margin: 0 auto 20px;
+      color: white;
+    }
+
+    .home-final p {
+      max-width: 550px;
+      margin: auto;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.8;
+      color: rgba(255,255,255,.75);
+    }
+
+    .home-final .elegant-button {
+      border-color: rgba(255,255,255,.65);
+      color: white;
+    }
+
+    .home-final .elegant-button:hover {
+      background: white;
+      color: var(--pine);
+    }
+
+    @media (max-width: 700px) {
+
+      .home-hero {
+        min-height: 82vh;
+      }
+
+      .home-title {
+        font-size: clamp(4rem, 20vw, 6rem);
+      }
+
+      .countdown-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .home-preview,
+      .home-preview.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 40px;
+      }
+
+      .home-preview-art {
+        min-height: 280px;
+      }
+
+      .home-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .home-section {
+        padding: 75px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- =========================================================
-       HERO
-  ========================================================== -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
-  <header class="hero">
+<header>
+  <nav>
+    <a href="index.html">S & D</a>
 
-    <nav class="navigation">
+    <div>
+      <a href="story.html">Our Story</a>
+      <a href="details.html">Wedding</a>
+      <a href="travel.html">Travel</a>
+      <a href="photos.html">Photos</a>
+      <a href="registry.html">Registry</a>
+      <a href="rsvp.html">RSVP</a>
+    </div>
+  </nav>
+</header>
 
-      <a href="#home" class="nav-logo">S & D</a>
 
-      <div class="nav-links">
-        <a href="#story">Our Story</a>
-        <a href="#details">Wedding Details</a>
-        <a href="#travel">Travel</a>
-        <a href="#registry">Registry</a>
-        <a href="#rsvp">RSVP</a>
-      </div>
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-    </nav>
+<main>
 
-    <main id="home" class="hero-content">
+<section class="home-hero">
 
-      <p class="eyebrow">
-        TOGETHER WITH OUR FAMILIES
-      </p>
+  <div class="home-hero-inner">
 
-      <h1>
-        Sophie <span>&</span> Draven
-      </h1>
-
-      <p class="hero-subtitle">
-        ARE GETTING MARRIED
-      </p>
-
-      <div class="ornament">✳</div>
-
-      <p class="wedding-date">
-        SATURDAY · DECEMBER 9, 2028
-      </p>
-
-      <p class="hero-location">
-        Great Falls, Montana
-      </p>
-
-      <a href="#details" class="button">
-        Wedding Details
-      </a>
-
-    </main>
-
-    <div class="hero-bottom">
-      A WINTER WEDDING IN MONTANA
+    <div class="home-eyebrow">
+      Together with our families
     </div>
 
-  </header>
+    <h1 class="home-title">
+      Sophie
+      <span class="home-ampersand">&amp;</span>
+      Draven
+    </h1>
+
+    <div class="home-subtitle">
+      Are getting married
+    </div>
+
+    <div class="home-ornament">
+      ✦ ♥ ✦
+    </div>
+
+    <div class="home-date">
+      Saturday · December 9, 2028
+    </div>
+
+    <div class="home-location">
+      Great Falls · Montana
+    </div>
+
+  </div>
+
+  <div class="home-scroll">
+    ↓ discover our story
+  </div>
+
+</section>
 
 
-  <!-- =========================================================
-       COUNTDOWN
-  ========================================================== -->
+<!-- =====================================================
+     COUNTDOWN
+     ===================================================== -->
 
-  <section class="countdown-section">
+<section class="home-countdown">
 
-    <div class="countdown-inner">
+  <div class="countdown-kicker">
+    Counting down to forever
+  </div>
 
-      <p class="countdown-eyebrow">
-        COUNTING DOWN TO FOREVER
-      </p>
+  <h2 class="countdown-title">
+    Our Wedding Day
+  </h2>
 
-      <div class="countdown-title">
+  <div class="countdown-grid">
 
-        <span></span>
+    <div class="countdown-unit">
+      <span class="countdown-number" id="days">--</span>
+      <span class="countdown-label">Days</span>
+    </div>
+
+    <div class="countdown-unit">
+      <span class="countdown-number" id="hours">--</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+
+    <div class="countdown-unit">
+      <span class="countdown-number" id="minutes">--</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+
+    <div class="countdown-unit">
+      <span class="countdown-number" id="seconds">--</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR STORY PREVIEW
+     ===================================================== -->
+
+<section class="home-section home-section-ivory">
+
+  <div class="home-section-inner">
+
+    <div class="home-preview">
+
+      <div class="home-preview-art"></div>
+
+      <div class="home-preview-content">
+
+        <div class="section-kicker">
+          A little bit of fate
+        </div>
 
         <h2>
-          Our Wedding Day
+          From Five Guys to forever.
         </h2>
 
-        <span></span>
+        <p>
+          Every love story has a beginning, and ours started in Great Falls,
+          Montana. A chance meeting, a Snapchat, and a whole lot of life
+          together later, here we are.
+        </p>
 
-      </div>
-
-      <p class="countdown-date">
-        SATURDAY · DECEMBER 9, 2028
-      </p>
-
-      <div class="countdown" id="countdown">
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="days">0</span>
-          <span class="countdown-label">DAYS</span>
-        </div>
-
-        <div class="countdown-divider">♥</div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="hours">0</span>
-          <span class="countdown-label">HOURS</span>
-        </div>
-
-        <div class="countdown-divider">♥</div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="minutes">0</span>
-          <span class="countdown-label">MINUTES</span>
-        </div>
-
-        <div class="countdown-divider">♥</div>
-
-        <div class="countdown-unit">
-          <span class="countdown-number" id="seconds">0</span>
-          <span class="countdown-label">SECONDS</span>
-        </div>
+        <a href="story.html" class="elegant-button">
+          Read Our Story →
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- =========================================================
-       OUR STORY
-  ========================================================== -->
+<!-- =====================================================
+     WEDDING PREVIEW
+     ===================================================== -->
 
-  <section id="story" class="section story-section">
+<section class="home-section home-section-soft">
 
-    <div class="story-inner">
+  <div class="home-section-inner">
 
-      <p class="eyebrow">
-        A LITTLE BIT OF FATE
-      </p>
+    <div class="home-preview reverse">
 
-      <h2>
-        Our Story
-      </h2>
+      <div class="home-preview-art"></div>
 
-      <div class="story-flourish" aria-hidden="true">
-        <span></span>
-        <span class="flourish-heart">♥</span>
-        <span></span>
-      </div>
+      <div class="home-preview-content">
 
-      <p class="story-tagline">
-        From Five Guys to forever.
-      </p>
-
-      <div class="story-letter">
-
-        <p class="story-dropcap">
-          Every love story has a beginning, and ours started
-          in Great Falls, Montana, somewhere we never expected.
-        </p>
-
-        <p>
-          It all began at Five Guys Burgers and Fries in Great
-          Falls. Draven was working behind the counter, making
-          French fries at the fryer, when I walked in as a
-          customer with my friend.
-        </p>
-
-        <p>
-          I spotted him and immediately turned to my friend
-          and said, “Oh my gosh, that boy is really cute!”
-          Luckily for me, she knew him and offered to give me
-          his Snapchat.
-        </p>
-
-        <p>
-          I added him, he added me back, and before long, we
-          were messaging and getting to know each other.
-          What I didn't know at first was that Draven had
-          noticed me, too. He thought I was really pretty,
-          and those first sparks turned out to be mutual.
-        </p>
-
-        <p>
-          What started with a cute boy making fries and one
-          little Snapchat add became the beginning of
-          something so much bigger than we could have imagined.
-        </p>
-
-        <p>
-          Since October 2 2021, we've celebrated five years
-          together, made so many memories, and grown together
-          through different chapters of life. Now, we're
-          getting ready for our next adventure: forever.
-        </p>
-
-        <p class="story-ending">
-          Who knew a trip to Five Guys could change everything?
-        </p>
-
-        <div class="story-signoff">
-          <span>Our forever starts here</span>
-          <span class="signoff-heart" aria-hidden="true">♥</span>
+        <div class="section-kicker">
+          Save the date
         </div>
 
-      </div>
-
-      <div class="story-bottom-note">
-
-        <span class="story-sparkle" aria-hidden="true">
-          ✧
-        </span>
+        <h2>
+          A winter wedding in Montana.
+        </h2>
 
         <p>
-          Some things are just meant to be.
+          Join us in Great Falls for a winter celebration filled with
+          snow, warm lights, evergreen, and the people we love most.
         </p>
 
-        <span class="story-sparkle" aria-hidden="true">
-          ✧
-        </span>
+        <a href="details.html" class="elegant-button">
+          Wedding Details →
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- =========================================================
-       WEDDING DETAILS
-  ========================================================== -->
+<!-- =====================================================
+     EXPLORE THE WEBSITE
+     ===================================================== -->
 
-  <section id="details" class="section details-section">
+<section class="home-feature-section">
 
-    <div class="details-inner">
+  <div class="home-feature-heading">
 
-      <p class="eyebrow">
-        SAVE THE DATE
-      </p>
-
-      <h2>
-        We're Getting Married
-      </h2>
-
-      <div class="details-flourish" aria-hidden="true">
-        <span></span>
-        <span>♥</span>
-        <span></span>
-      </div>
-
-      <p class="details-intro">
-        We can't wait to celebrate our next chapter with
-        the people we love most.
-      </p>
-
-      <div class="details-main-card">
-
-        <p class="detail-label">
-          OUR WEDDING
-        </p>
-
-        <h3>
-          December 9, 2028
-        </h3>
-
-        <p class="venue-name">
-          Rendezvous at Four Ten
-        </p>
-
-        <p class="venue-location">
-          Great Falls, Montana
-        </p>
-
-        <div class="date-note">
-
-          <span class="date-note-heart">
-            ♥
-          </span>
-
-          <span>
-            December 9, 2028
-          </span>
-
-          <span class="date-note-heart">
-            ♥
-          </span>
-
-        </div>
-
-      </div>
-
-      <div class="detail-cards">
-
-        <div class="detail-card">
-
-          <div class="detail-icon">
-            ♡
-          </div>
-
-          <p class="detail-card-label">
-            THE VENUE
-          </p>
-
-          <h4>
-            Rendezvous<br>
-            at Four Ten
-          </h4>
-
-          <p>
-            A beautiful Montana setting where we'll
-            celebrate our wedding day.
-          </p>
-
-        </div>
-
-
-        <div class="detail-card">
-
-          <div class="detail-icon">
-            ✧
-          </div>
-
-          <p class="detail-card-label">
-            THE CITY
-          </p>
-
-          <h4>
-            Great Falls
-          </h4>
-
-          <p>
-            Our wedding will take place in the
-            city where our story began.
-          </p>
-
-        </div>
-
-
-        <div class="detail-card">
-
-          <div class="detail-icon">
-            ❄
-          </div>
-
-          <p class="detail-card-label">
-            THE SEASON
-          </p>
-
-          <h4>
-            Winter
-          </h4>
-
-          <p>
-            A December celebration filled with
-            love, warmth, and a little Montana magic.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="details-bottom">
-
-        <p>
-          More wedding day details will be shared as we get closer.
-        </p>
-
-      </div>
-
+    <div class="section-kicker">
+      Explore
     </div>
 
-  </section>
-
-
-  <!-- =========================================================
-       TRAVEL
-  ========================================================== -->
-
-  <section id="travel" class="section travel-section">
-
-    <div class="travel-inner">
-
-      <p class="eyebrow">
-        FOR OUR GUESTS
-      </p>
-
-      <h2>
-        Travel & Accommodations
-      </h2>
-
-      <div class="travel-flourish" aria-hidden="true">
-        <span></span>
-        <span>♥</span>
-        <span></span>
-      </div>
-
-      <p class="travel-intro">
-        Most of our family and friends already call Great Falls home,
-        but for those traveling in to celebrate with us, we've gathered
-        a few helpful details to make your trip a little easier.
-      </p>
-
-
-      <div class="travel-cards">
-
-        <div class="travel-card">
-
-          <div class="travel-icon">
-            ♡
-          </div>
-
-          <p class="travel-card-label">
-            THE VENUE
-          </p>
-
-          <h3>
-            Rendezvous at Four Ten
-          </h3>
-
-          <p>
-            Our wedding will take place downtown at
-            Rendezvous at Four Ten.
-          </p>
-
-          <p class="travel-detail">
-            410 Central Ave · Great Falls, Montana
-          </p>
-
-        </div>
-
-
-        <div class="travel-card">
-
-          <div class="travel-icon">
-            ✧
-          </div>
-
-          <p class="travel-card-label">
-            PARKING
-          </p>
-
-          <h3>
-            Easy & Convenient
-          </h3>
-
-          <p>
-            The venue has a dedicated parking garage,
-            making it easy to park and enjoy the celebration.
-          </p>
-
-        </div>
-
-
-        <div class="travel-card">
-
-          <div class="travel-icon">
-            ✦
-          </div>
-
-          <p class="travel-card-label">
-            GETTING AROUND
-          </p>
-
-          <h3>
-            Great Falls
-          </h3>
-
-          <p>
-            Great Falls is an easy city to navigate, with a
-            simple grid and convenient routes around town.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- WHERE TO STAY -->
-
-      <div class="stay-section">
-
-        <p class="travel-card-label">
-          WHERE TO STAY
-        </p>
-
-        <h3>
-          A Few Nearby Options
-        </h3>
-
-        <p class="stay-intro">
-          For our out-of-town guests, here are a few places
-          to consider when planning your stay.
-        </p>
-
-        <div class="hotel-list">
-
-          <div class="hotel-item">
-
-            <h4>
-              Hotel Arvon
-            </h4>
-
-            <p>
-              A historic hotel in downtown Great Falls,
-              close to the wedding venue.
-            </p>
-
-          </div>
-
-
-          <div class="hotel-item">
-
-            <h4>
-              The Gibson Hotel
-            </h4>
-
-            <p>
-              A downtown option with a convenient location
-              near Central Avenue.
-            </p>
-
-          </div>
-
-
-          <div class="hotel-item">
-
-            <h4>
-              SpringHill Suites
-            </h4>
-
-            <p>
-              A comfortable option for guests looking for
-              modern rooms and suite-style accommodations.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- WHILE YOU'RE HERE -->
-
-      <div class="while-here">
-
-        <p class="eyebrow">
-          WHILE YOU'RE HERE
-        </p>
-
-        <h3>
-          A Few Great Falls Favorites
-        </h3>
-
-        <p class="while-here-intro">
-          If you have some extra time before or after the wedding,
-          here are a few places we'd love for you to experience.
-        </p>
-
-        <div class="favorite-list">
-
-          <div class="favorite-item">
-
-            <span class="favorite-number">
-              01
-            </span>
-
-            <div>
-
-              <h4>
-                Visit Where It All Began ♡
-              </h4>
-
-              <p>
-                Stop by Five Guys in Great Falls—the place where
-                Sophie and Draven first met.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="favorite-item">
-
-            <span class="favorite-number">
-              02
-            </span>
-
-            <div>
-
-              <h4>
-                Sip 'n Dip Lounge
-              </h4>
-
-              <p>
-                A Great Falls classic and a must while you're
-                visiting town.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="favorite-item">
-
-            <span class="favorite-number">
-              03
-            </span>
-
-            <div>
-
-              <h4>
-                Lewis & Clark Interpretive Center
-              </h4>
-
-              <p>
-                Explore the history of Lewis and Clark's journey
-                through Montana.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="favorite-item">
-
-            <span class="favorite-number">
-              04
-            </span>
-
-            <div>
-
-              <h4>
-                C. M. Russell Museum
-              </h4>
-
-              <p>
-                Experience the art and legacy of one of
-                Montana's most famous artists.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- WINTER NOTE -->
-
-      <div class="winter-note">
-
-        <span>
-          ❄
-        </span>
-
-        <p>
-          <strong>A note for December:</strong>
-          Montana winters can be chilly, so come prepared
-          with warm layers and winter shoes. We'll take care
-          of the rest. ♡
-        </p>
-
-        <span>
-          ❄
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       REGISTRY
-  ========================================================== -->
-
-  <section id="registry" class="section registry-section">
-
-    <div class="registry-inner">
-
-      <p class="eyebrow">
-        GIFTS &amp; FUNDS
-      </p>
-
-      <h2>
-        Our Next Chapter
-      </h2>
-
-      <div class="registry-flourish" aria-hidden="true">
-        <span></span>
-        <span>♥</span>
-        <span></span>
-      </div>
-
-      <p class="registry-intro">
-        Your presence at our wedding means more to us than anything.
-        We truly don't expect gifts, but for those who have asked,
-        we've included a couple of options below.
-      </p>
-
-      <p class="registry-intro registry-intro-second">
-        If you'd like to celebrate with a gift, you're welcome to
-        contribute toward our future together or our honeymoon.
-        And if you'd rather bring a card to the wedding, we'll have
-        a place for cards there as well.
-      </p>
-
-
-      <div class="fund-cards">
-
-        <!-- FUTURE FUND -->
-
-        <div class="fund-card">
-
-          <div class="fund-icon">
-            ♡
-          </div>
-
-          <p class="fund-label">
-            FOR OUR FUTURE
-          </p>
-
-          <h3>
-            Future Fund
-          </h3>
-
-          <p>
-            For those who would like to help us begin
-            our next chapter together.
-          </p>
-
-          <a
-            class="fund-button"
-            href="https://venmo.com/u/Sophie-no12"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ♡ View Future Fund
-          </a>
-
-        </div>
-
-
-        <!-- HONEYMOON FUND -->
-
-        <div class="fund-card">
-
-          <div class="fund-icon">
-            ✈
-          </div>
-
-          <p class="fund-label">
-            FOR OUR ADVENTURE
-          </p>
-
-          <h3>
-            Honeymoon Fund
-          </h3>
-
-          <p>
-            For those who would like to help us make
-            memories together.
-          </p>
-
-          <a
-            class="fund-button"
-            href="https://venmo.com/u/Sophie-no12"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ✈ View Honeymoon Fund
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- CARD BOX -->
-
-      <div class="in-person-gift">
-
-        <span class="gift-icon">
-          ♡
-        </span>
-
-        <div>
-
-          <p class="gift-title">
-            Bringing a Card?
-          </p>
-
-          <p>
-            We'll have a card box at the wedding if you'd
-            prefer to bring a card with you.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="registry-bottom">
-
-        <p>
-          Most importantly, having you celebrate with us
-          is the greatest gift of all.
-        </p>
-
-        <span>
-          ♥
-        </span>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       RSVP
-  ========================================================== -->
-
-  <section id="rsvp" class="section rsvp-section">
-
-    <div class="rsvp-inner">
-
-      <p class="eyebrow">
-        WE'D LOVE TO CELEBRATE WITH YOU
-      </p>
-
-      <h2>
-        RSVP
-      </h2>
-
-      <div class="rsvp-flourish" aria-hidden="true">
-        <span></span>
-        <span>♥</span>
-        <span></span>
-      </div>
-
-      <p class="rsvp-intro">
-        We can't wait to celebrate our wedding day with
-        the people we love most.
-      </p>
-
-
-      <div class="rsvp-card">
-
-        <div class="rsvp-icon">
-          ♡
-        </div>
-
-        <h3>
-          Save the Date
-        </h3>
-
-        <p>
-          RSVP details will be shared as we get closer to
-          December 9, 2028.
-        </p>
-
-        <p class="rsvp-note">
-          For now, mark your calendars and know that
-          we'll be so excited to celebrate with you.
-        </p>
-
-        <div class="rsvp-date">
-
-          <span>
-            DECEMBER 9, 2028
-          </span>
-
-          <span>
-            ·
-          </span>
-
-          <span>
-            GREAT FALLS, MONTANA
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="rsvp-bottom">
-
-        <p>
-          We hope you'll be there. ♡
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
-
-  <footer class="footer">
-
-    <div class="footer-flourish" aria-hidden="true">
-      <span></span>
-      <span>♥</span>
-      <span></span>
-    </div>
-
-    <p class="footer-names">
-      SOPHIE &amp; DRAVEN
+    <h2>
+      Everything in one place.
+    </h2>
+
+    <p>
+      From our story to our favorite memories, we've created a little
+      corner of the internet to celebrate everything leading up to
+      our wedding day.
     </p>
 
-    <p class="footer-date">
-      DECEMBER 9, 2028 · GREAT FALLS, MONTANA
-    </p>
-
-    <p class="footer-message">
-      We can't wait to celebrate with you.
-    </p>
-
-    <p class="footer-heart">
-      ♡
-    </p>
-
-  </footer>
+  </div>
 
 
-  <!-- =========================================================
-       COUNTDOWN JAVASCRIPT
-  ========================================================== -->
+  <div class="home-feature-grid">
 
-  <script>
-    const weddingDate = new Date(
-      "2028-12-09T00:00:00-07:00"
-    ).getTime();
+    <a href="travel.html" class="home-feature-card">
 
-    function updateCountdown() {
+      <div class="home-feature-number">01</div>
 
-      const now = new Date().getTime();
-      const difference = weddingDate - now;
+      <h3>Travel</h3>
 
-      if (difference <= 0) {
+      <p>
+        Planning a trip to Great Falls? Find helpful information
+        for your visit to Montana.
+      </p>
 
-        document.getElementById("countdown").innerHTML = `
-          <div class="countdown-unit">
-            <span class="countdown-number">♥</span>
-            <span class="countdown-label">TODAY IS THE DAY</span>
-          </div>
-        `;
+      <div class="home-feature-arrow">
+        Explore Great Falls →
+      </div>
 
-        return;
-      }
+    </a>
 
-      const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-      );
 
-      const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-      );
+    <a href="photos.html" class="home-feature-card">
 
-      const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-      );
+      <div class="home-feature-number">02</div>
 
-      const seconds = Math.floor(
-        (difference / 1000) % 60
-      );
+      <h3>Our Photos</h3>
 
-      document.getElementById("days").textContent = days;
+      <p>
+        A collection of the moments, adventures, and memories
+        we've made together.
+      </p>
 
-      document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
+      <div class="home-feature-arrow">
+        View Our Memories →
+      </div>
 
-      document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
+    </a>
 
-      document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
+
+    <a href="registry.html" class="home-feature-card">
+
+      <div class="home-feature-number">03</div>
+
+      <h3>Registry</h3>
+
+      <p>
+        Your presence is the greatest gift, but we've put together
+        a few ways to celebrate our future with us.
+      </p>
+
+      <div class="home-feature-arrow">
+        Visit Our Registry →
+      </div>
+
+    </a>
+
+
+    <a href="rsvp.html" class="home-feature-card">
+
+      <div class="home-feature-number">04</div>
+
+      <h3>RSVP</h3>
+
+      <p>
+        Save the date and check back here for formal RSVP information
+        as the wedding gets closer.
+      </p>
+
+      <div class="home-feature-arrow">
+        RSVP Information →
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL MESSAGE
+     ===================================================== -->
+
+<section class="home-final">
+
+  <div class="section-kicker">
+    December 9 · 2028
+  </div>
+
+  <h2>
+    We can't wait<br>
+    to celebrate with you.
+  </h2>
+
+  <p>
+    Until then, we'll be counting down the days, making memories,
+    and getting ready for one of the biggest days of our lives.
+  </p>
+
+  <a href="details.html" class="elegant-button">
+    Explore The Wedding →
+  </a>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+  <p>
+    Sophie & Draven · December 9, 2028 · Great Falls, Montana
+  </p>
+</footer>
+
+
+<!-- =====================================================
+     COUNTDOWN SCRIPT
+     ===================================================== -->
+
+<script>
+  const weddingDate =
+    new Date("2028-12-09T00:00:00-07:00").getTime();
+
+  function updateCountdown() {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance <= 0) {
+
+      document.querySelector(".home-countdown").innerHTML = `
+        <div class="countdown-kicker">Today is the day</div>
+        <h2 class="countdown-title">♥ Let's get married ♥</h2>
+      `;
+
+      return;
     }
 
-    updateCountdown();
+    const days = Math.floor(
+      distance / (1000 * 60 * 60 * 24)
+    );
 
-    setInterval(updateCountdown, 1000);
-  </script>
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24))
+      / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+      (distance % (1000 * 60 * 60))
+      / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+      (distance % (1000 * 60))
+      / 1000
+    );
+
+    document.getElementById("days").textContent =
+      days.toLocaleString();
+
+    document.getElementById("hours").textContent =
+      String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+      String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+      String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
