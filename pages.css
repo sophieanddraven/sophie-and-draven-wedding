@@ -817,3 +817,25 @@
     left: -42px;
   }
 }
+
+/* Consistent decorative snowflakes across devices */
+
+.winter-snowflake {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask: url("snowflake.svg") center / contain no-repeat;
+  mask: url("snowflake.svg") center / contain no-repeat;
+}
+
+.winter-snowflake.small {
+  width: 16px;
+  height: 16px;
+}
+
+.winter-snowflake.large {
+  width: 36px;
+  height: 36px;
+}
