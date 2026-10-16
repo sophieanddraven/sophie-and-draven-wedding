@@ -3295,3 +3295,21 @@ p {
     gap: 12px;
   }
 }
+
+/* Keep homepage navigation clickable */
+
+.navigation {
+  position: relative;
+  z-index: 100;
+}
+
+.nav-links {
+  position: relative;
+  z-index: 101;
+}
+
+.nav-links a {
+  position: relative;
+  z-index: 102;
+  pointer-events: auto;
+}
