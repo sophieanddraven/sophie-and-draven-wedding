@@ -3521,3 +3521,19 @@ p {
     opacity: 1;
   }
 }
+
+/* Make bottom wedding text readable on iPhone */
+@media screen and (max-width: 768px) {
+  .hero-bottom {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+
+    background: rgba(20, 43, 37, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding: 18px 12px;
+    position: relative;
+    z-index: 3;
+  }
+}
