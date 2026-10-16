@@ -3430,3 +3430,52 @@ p {
     max-height: 22px !important;
   }
 }
+
+/* Winter decorations: iPhone and desktop */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: none !important;
+}
+
+.hero .hero-winter-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./winter-details.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 100%;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .navigation,
+.hero .hero-content,
+.hero .hero-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep existing date snowflake size */
+.hero .hero-snowflake {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-winter-art {
+    background-size: 100% 100%;
+    background-position: center bottom;
+  }
+}
