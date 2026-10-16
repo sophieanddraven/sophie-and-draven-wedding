@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <g id="flake" fill="none" stroke="#edf5f0" stroke-width="1.4" stroke-linecap="round" opacity=".75">
+    <path d="M0-17V17M-17 0H17M-12-12L12 12M12-12L-12 12"/>
+    <path d="M0-17l-4 5m4-5l4 5M0 17l-4-5m4 5l4-5M-17 0l5-4m-5 4l5 4M17 0l-5-4m5 4l-5 4"/>
+  </g>
+  <g id="pine" fill="none" stroke="#d7e8de" stroke-width="2" stroke-linejoin="round" opacity=".27">
+    <path d="M0 0v-132M-43-22L0-82 43-22H25L0-52-25-22ZM-37-55L0-112 37-55H20L0-83-20-55ZM-27-87L0-132 27-87H14L0-107-14-87Z"/>
+  </g>
+</defs>
+<g opacity=".52">
+  <use href="#flake" transform="translate(120 142) scale(.7)"/>
+  <use href="#flake" transform="translate(365 90) scale(.42)"/>
+  <use href="#flake" transform="translate(1100 110) scale(.8)"/>
+  <use href="#flake" transform="translate(1330 250) scale(.52)"/>
+  <use href="#flake" transform="translate(75 425) scale(.48)"/>
+  <use href="#flake" transform="translate(1260 570) scale(.7)"/>
+  <use href="#flake" transform="translate(270 655) scale(.5)"/>
+  <use href="#flake" transform="translate(985 720) scale(.4)"/>
+  <use href="#flake" transform="translate(770 165) scale(.38)"/>
+  <use href="#flake" transform="translate(490 765) scale(.34)"/>
+</g>
+<g>
+  <use href="#pine" transform="translate(60 900) scale(1.45)"/>
+  <use href="#pine" transform="translate(130 900) scale(1.05)"/>
+  <use href="#pine" transform="translate(212 900) scale(.68)"/>
+  <use href="#pine" transform="translate(1380 900) scale(1.5)"/>
+  <use href="#pine" transform="translate(1300 900) scale(1.08)"/>
+  <use href="#pine" transform="translate(1220 900) scale(.7)"/>
+</g>
+</svg>
