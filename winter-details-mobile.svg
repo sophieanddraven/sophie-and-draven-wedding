@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 800" preserveAspectRatio="none" aria-hidden="true">
+  <!-- Transparent artwork for a dark forest-green background. -->
+  <defs>
+    <g id="snowflake" fill="none" stroke="#e7f1ec" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0-12V12M-12 0H12M-8.5-8.5L8.5 8.5M8.5-8.5L-8.5 8.5"/>
+      <path d="M-3-9l3-3 3 3M-3 9l3 3 3-3M-9-3l-3 3 3 3M9-3l3 3-3 3"/>
+    </g>
+    <g id="pine" fill="none" stroke="#d9e9df" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M0 0V-137"/>
+      <path d="M-43-25L0-85 43-25 27-25 0-59-27-25Z"/>
+      <path d="M-35-62L0-112 35-62 21-62 0-91-21-62Z"/>
+      <path d="M-24-96L0-137 24-96 13-96 0-119-13-96Z"/>
+    </g>
+  </defs>
+  <!-- Snowflakes around the outer margins; center kept clear for names/date. -->
+  <g opacity=".70">
+    <use href="#snowflake" transform="translate(30 130) scale(.68)"/>
+    <use href="#snowflake" transform="translate(361 115) scale(.55)"/>
+    <use href="#snowflake" transform="translate(16 256) scale(.44)"/>
+    <use href="#snowflake" transform="translate(376 287) scale(.72)"/>
+    <use href="#snowflake" transform="translate(36 430) scale(.52)"/>
+    <use href="#snowflake" transform="translate(359 485) scale(.48)"/>
+    <use href="#snowflake" transform="translate(21 584) scale(.72)"/>
+    <use href="#snowflake" transform="translate(373 618) scale(.56)"/>
+    <use href="#snowflake" transform="translate(96 704) scale(.38)"/>
+    <use href="#snowflake" transform="translate(299 690) scale(.40)"/>
+  </g>
+  <!-- Soft, readable winter treeline, concentrated in the bottom corners. -->
+  <g opacity=".57">
+    <use href="#pine" transform="translate(14 794) scale(1.22)"/>
+    <use href="#pine" transform="translate(61 796) scale(.91)"/>
+    <use href="#pine" transform="translate(107 799) scale(.60)"/>
+    <use href="#pine" transform="translate(381 795) scale(1.28)"/>
+    <use href="#pine" transform="translate(326 797) scale(.91)"/>
+    <use href="#pine" transform="translate(279 799) scale(.59)"/>
+  </g>
+</svg>
