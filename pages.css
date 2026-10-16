@@ -1313,3 +1313,141 @@
     min-height: 250px;
   }
 }
+
+/* =========================================
+   SOPHIE & DRAVEN — RSVP PAGE
+   ========================================= */
+
+.rsvp-page-content {
+  background: #f7f8f6;
+  padding: 65px 20px 85px;
+}
+
+.rsvp-welcome {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.rsvp-heart {
+  display: block;
+  color: #874452;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.rsvp-welcome h2,
+.rsvp-form-heading h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 6vw, 54px);
+  font-weight: 500;
+  color: #1f3932;
+  margin: 0 0 18px;
+}
+
+.rsvp-welcome p,
+.rsvp-form-heading p {
+  color: #66716f;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.rsvp-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto 65px;
+}
+
+.rsvp-note-card {
+  padding: 35px 30px;
+  background: #ffffff;
+  border: 1px solid #d5e2e5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.rsvp-note-icon {
+  display: block;
+  font-size: 25px;
+  color: #874452;
+  margin-bottom: 12px;
+}
+
+.rsvp-note-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 29px;
+  font-weight: 500;
+  color: #1f3932;
+  margin: 0 0 15px;
+}
+
+.rsvp-note-card p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #66716f;
+  margin: 0 0 12px;
+}
+
+.rsvp-note-card p:last-child {
+  margin-bottom: 0;
+}
+
+.rsvp-form-heading {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.rsvp-google-form {
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid #d5e2e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.rsvp-google-form iframe {
+  display: block;
+  width: 100%;
+  height: 1450px;
+  border: none;
+}
+
+.rsvp-closing {
+  margin: 35px auto 0;
+  text-align: center;
+  color: #36564f;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-style: italic;
+}
+
+/* iPhone and smaller screens */
+@media screen and (max-width: 700px) {
+
+  .rsvp-page-content {
+    padding: 45px 12px 65px;
+  }
+
+  .rsvp-notes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .rsvp-note-card {
+    padding: 28px 20px;
+  }
+
+  .rsvp-google-form iframe {
+    height: 1650px;
+  }
+
+  .rsvp-welcome h2,
+  .rsvp-form-heading h2 {
+    font-size: 40px;
+  }
+}
