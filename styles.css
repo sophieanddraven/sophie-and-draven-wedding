@@ -3343,3 +3343,16 @@ p {
   pointer-events: none;
   z-index: -1;
 }
+
+/* Keep the wedding-date snowflake small */
+
+.hero-snowflake {
+  display: block !important;
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  margin: 20px auto !important;
+  color: #d5e2e5;
+  opacity: 0.8;
+}
